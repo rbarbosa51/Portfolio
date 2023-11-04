@@ -7,6 +7,8 @@ import React, { useRef} from 'react'
 import { useGLTF } from '@react-three/drei'
 import { useThree } from '@react-three/fiber'
 
+import { Outlines } from '@react-three/drei'
+
 
 export function PortfolioRoom(props) {
   const { nodes, materials } = useGLTF('./models/PortfolioRoom.glb')
@@ -54,6 +56,7 @@ export function PortfolioRoom(props) {
         <mesh name="computer2_6" castShadow receiveShadow geometry={nodes.computer2_6.geometry} material={materials.whitescreen} />
       </group>
       <group name="arcade" position={[0.666, 0.364, 0.179]}>
+        
         <mesh name="arcade_1" castShadow receiveShadow geometry={nodes.arcade_1.geometry} material={materials.avtomat} />
         <mesh name="arcade_2" castShadow receiveShadow geometry={nodes.arcade_2.geometry} material={materials.black} />
         <mesh name="arcade_3" castShadow receiveShadow geometry={nodes.arcade_3.geometry} material={materials.gren2} />

@@ -11,7 +11,7 @@ export default function Room() {
 
     return (
         <>
-            <Canvas shadows camera={{position:[0, 3, 5], rotation:[0,0,0],fov: 45}}>
+            <Canvas shadows camera={{position:[0, 3, 5], rotation:[0,0,0],fov: 20}}>
                 <Suspense fallback={<Loading />}>
                     <Scene />
                     
