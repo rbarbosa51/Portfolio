@@ -15,16 +15,23 @@ function App() {
 
   return (
     <>
-      {transitions((props, item) => (
-        <animated.div style={props}>
-          <Routes location={item}>
-            <Route path="/" exact element={<Room />} />
-            <Route path='/placeholder' exact element={<Placeholder />} />
-          </Routes>
-        </animated.div>
-      ))}
+      <Routes location={location}>
+        <Route path="/" exact element={<Room />} />
+        <Route path='/placeholder' exact element={<Placeholder />} />
+      </Routes>
     </>
   )
 }
 
 export default App
+
+/*
+{transitions((props, item) => (
+  <animated.div style={props}>
+    <Routes location={item}>
+      <Route path="/" exact element={<Room />} />
+      <Route path='/placeholder' exact element={<Placeholder />} />
+    </Routes>
+  </animated.div>
+))}
+*/
