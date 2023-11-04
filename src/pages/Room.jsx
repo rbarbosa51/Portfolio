@@ -1,29 +1,22 @@
 import { Suspense } from "react"
-import { Canvas } from "@react-three/fiber"
-import { OrbitControls, Sky, Environment } from "@react-three/drei"
+import { Canvas} from "@react-three/fiber"
+
 import {Loading} from '../pages'
-import {PortfolioRoom} from '../components/PortfolioRoom'
+import { Scene } from "../components"
+
+
 
 export default function Room() {
+    
+
     return (
         <>
-            <Canvas shadows camera={{position:[0,0,5], fov: 45}}>
-                {/* <color attach={'background'} args={['#ececec']} /> */}
+            <Canvas shadows camera={{position:[0, 3, 5], rotation:[0,0,0],fov: 45}}>
                 <Suspense fallback={<Loading />}>
-                    {/* <Scene />  */}
-                    <OrbitControls />
-                    <Sky />
-                    <Environment preset='forest'/>
-                    {/* <Room /> */}
-                    {/* <mesh scale={[1,1,1]} position-y={0}>
-                      <boxGeometry />
-                      <meshStandardMaterial color={'white'} />
-                    </mesh> */}
-                    <PortfolioRoom />
-
+                    <Scene />
+                    
                 </Suspense>
             </Canvas>
-            {/* <NavLink to='/placeholder'>Placeholder</NavLink> */}
         </>
     )
 }
