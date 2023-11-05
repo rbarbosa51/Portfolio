@@ -1,1 +1,1 @@
-export {default as Scene} from './Scene';
+export {default as RoomModels} from './RoomModels'

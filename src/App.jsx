@@ -4,14 +4,14 @@ import {Room, Placeholder} from './pages'
 
 function App() {
   const location = useLocation()
-  const transitions = useTransition(location, {
-    from: { opacity:0.3, filter: 'blur(100px)' ,transform: 'rotate(180deg)'},
-    enter: { opacity:1,filter: 'blur(0px)', transform: 'rotate(0deg)'},
-    leave: { opacity:0.3,filter: 'blur(100px)', transform: ' rotate(-180deg)'},
-    config: {duration: 750},
-    exitBeforeEnter: true
+  // const transitions = useTransition(location, {
+  //   from: { opacity:0.3, filter: 'blur(100px)' ,transform: 'rotate(180deg)'},
+  //   enter: { opacity:1,filter: 'blur(0px)', transform: 'rotate(0deg)'},
+  //   leave: { opacity:0.3,filter: 'blur(100px)', transform: ' rotate(-180deg)'},
+  //   config: {duration: 750},
+  //   exitBeforeEnter: true
     
-  });
+  // });
 
   return (
     <>
