@@ -1,8 +1,7 @@
 import { Suspense } from "react"
 import { Canvas} from "@react-three/fiber"
-import { OrbitControls } from "@react-three/drei"
 import {Loading} from '../pages'
-import {RoomModels} from '../components'
+import Scene from "../components/Scene"
 
 export default function Room() {
     
@@ -11,11 +10,7 @@ export default function Room() {
         <>
             <Canvas shadows camera={{position:[1.5, 3, 2], rotation:[0,0,0],fov: 20}}>
                 <Suspense fallback={<Loading />}>
-                    <color attach={'background'} args={['#000000']}/>
-                    <OrbitControls />
-                    <ambientLight intensity={3.0} />
-                    <directionalLight intensity={5} />
-                    <RoomModels />
+                    <Scene />
                 </Suspense>
             </Canvas>
         </>
