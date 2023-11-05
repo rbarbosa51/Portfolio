@@ -60,7 +60,7 @@ function RoomModels() {
                 <primitive object={picture2.scene} onClick={() => console.log('Picture 2')}/>
                 <meshBasicMaterial />
             </mesh>
-            <mesh >
+            <mesh position={[-1.7,0.25,-0.7]}>
                 <primitive object={cards.scene} onClick={() => console.log('Cards')}/>
                 <meshBasicMaterial />
             </mesh>
