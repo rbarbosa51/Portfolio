@@ -23,10 +23,17 @@ function RoomModels() {
                 <primitive object={room.scene} />
                 <meshStandardMaterial map={texture} />
             </mesh>
-            <mesh >
-                <primitive object={arcade.scene} onClick={(e) => {e.stopPropagation(); console.log('Arcade')}}/>
-                <meshBasicMaterial />
-            </mesh>
+            <group>
+                <mesh >
+                    <primitive object={arcade.scene} onClick={(e) => {e.stopPropagation(); console.log('Arcade')}}/>
+                    <meshBasicMaterial />
+                </mesh>
+                <Html position={[-1,1.4,0.75]} >
+                    <div className="bg-gradient-to-b from-purple-100 to-purple-500/50 rounded-full px-2" onClick={() => console.log('Clicked Test label')}>
+                        <h1 className="text-white">Arcade</h1>
+                    </div>
+                </Html>
+            </group>
             <mesh >
                 <primitive object={resume.scene} onClick={() => console.log('resume')} />
                 <meshBasicMaterial />
