@@ -1,7 +1,7 @@
 import RoomModels from "./RoomModels"
-import { OrbitControls, CameraControls, GizmoHelper, GizmoViewport, PerspectiveCamera } from "@react-three/drei"
+import { CameraControls, PerspectiveCamera } from "@react-three/drei"
 import { useLayoutEffect, useRef, useState, useEffect } from "react";
-import {useControls, button, buttonGroup} from 'leva';
+import {useControls, button, } from 'leva';
 
 export default function Scene() {
     const cameraControlsRef = useRef();
@@ -11,7 +11,6 @@ export default function Scene() {
         Reset: button(() => {
             cameraControlsRef.current.setLookAt(1.875,2.3403,1.8246, -2, 0, -2, true)
             cameraControlsRef.current.rotate(0,0, true);
-            // cameraControlsRef.current.setLookAt(1.675,2.1403,1.6246, -2, 0, -2, true)
             if (!isZoomed.current) {
                 cameraControlsRef.current.zoom(-0.25, true);
                 isZoomed.current = true
@@ -19,9 +18,10 @@ export default function Scene() {
         })
     })
 
-    useLayoutEffect(() => {
-        cameraControlsRef.current.setLookAt(3,1.3403,3, -2, 1.5, -2, true)
-        cameraControlsRef.current.zoom(-0.25, true);
+    useEffect(() => {
+        // cameraControlsRef.current.setLookAt(3, 1.3403, 3, -2, 1.5, -2, true)
+        cameraControlsRef.current.setLookAt(3, 2, 3, -2, 1.5, -2, true)
+        // cameraControlsRef.current.zoom(-0.25, true);
     }, [])
     return (
         <>

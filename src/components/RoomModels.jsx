@@ -1,10 +1,9 @@
 import { useGLTF, useTexture, Html } from "@react-three/drei"
 import { memo, useRef } from "react"
 //Debug
-import { useThree } from "@react-three/fiber";
+
 
 function RoomModels() {
-    const three = useThree();
     const room = useGLTF('/models/room.glb')
     const arcade = useGLTF('/models/arcade.glb')
     const resume = useGLTF('/models/resume.glb')
@@ -20,7 +19,7 @@ function RoomModels() {
 
     return (
         <>
-            <mesh onClick={() => console.log(three)}>
+            <mesh >
                 <primitive object={room.scene} />
                 <meshStandardMaterial map={texture} />
             </mesh>
