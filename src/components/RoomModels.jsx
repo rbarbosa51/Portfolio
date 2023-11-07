@@ -16,7 +16,11 @@ function RoomModels() {
     const picture1 = useGLTF('/models/picture1.glb')
     const picture2 = useGLTF('/models/picture2.glb')
     const cards = useGLTF('/models/cards.glb')
-
+    const resumeClick = (e) => {
+        e.stopPropagation();
+        window.open('https://drive.google.com/file/d/1TpmA0hnA6PjHiS66V1CX972sd64GfHQq/view?usp=sharing', '_blank')
+        console.log("here!!!!!")
+    }
     return (
         <>
             <mesh >
@@ -35,10 +39,10 @@ function RoomModels() {
                 </Html>
             </group>
             <mesh >
-                <primitive object={resume.scene} onClick={() => console.log('resume')} />
+                <primitive object={resume.scene} onClick={resumeClick} />
                 <meshBasicMaterial />
                 <Html occlude position={[-1.4,1.85,0.3]} >
-                    <div className="bg-gradient-to-b from-sky-50/50 to-sky-500/50 rounded-full px-2" onClick={() => console.log('Clicked Test label')}>
+                    <div className="bg-gradient-to-b from-sky-50/50 to-sky-500/50 rounded-full px-2" onClick={resumeClick}>
                         <h1 className="text-white text-sm">Resume</h1>
                     </div>
                 </Html>
@@ -121,7 +125,3 @@ function RoomModels() {
 
 export default memo(RoomModels)
 
-{/* <mesh position={[-1.7,0.25,-0.7]}>
-    <primitive object={cards.scene} onClick={() => console.log('Cards')}/>
-    <meshBasicMaterial />                
-</mesh>  */}
