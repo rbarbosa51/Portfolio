@@ -4,7 +4,7 @@ export default function AmazonBook() {
     return (
        
         <>
-        <Card className="max-w-[400px] bg-white/80 rounded-2xl my-4">
+        <Card className="max-w-[400px] bg-white/80 rounded-2xl top-4">
         <CardHeader className="flex gap-3">
           <Image
             alt="nextui logo"
