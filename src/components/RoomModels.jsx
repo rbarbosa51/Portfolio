@@ -1,9 +1,10 @@
 import { useGLTF, useTexture, Html } from "@react-three/drei"
 import { memo, useRef } from "react"
-//Debug
+import { useNavigate } from "react-router-dom"
 
 
 function RoomModels() {
+    const navigate = useNavigate();
     const room = useGLTF('/models/room.glb')
     const arcade = useGLTF('/models/arcade.glb')
     const resume = useGLTF('/models/resume.glb')
@@ -19,7 +20,10 @@ function RoomModels() {
     const resumeClick = (e) => {
         e.stopPropagation();
         window.open('https://drive.google.com/file/d/1TpmA0hnA6PjHiS66V1CX972sd64GfHQq/view?usp=sharing', '_blank')
-        console.log("here!!!!!")
+    }
+    const bookClick = (e) => {
+        e.stopPropagation();
+        navigate('/book')
     }
     return (
         <>
@@ -48,9 +52,9 @@ function RoomModels() {
                 </Html>
             </mesh>
             <mesh >
-                <primitive object={books.scene} onClick={() => console.log('Books ')} />
+                <primitive object={books.scene} onClick={bookClick} />
                 <meshBasicMaterial />
-                <Html occlude position={[-1.35,1.85,-0.65]} >
+                <Html occlude position={[-1.35,1.85,-0.65]} onClick={bookClick}>
                     <div className="bg-gradient-to-b from-sky-50/50 to-sky-500/50 rounded-full px-2" onClick={() => console.log('Clicked Test label')}>
                         <h1 className="text-white text-sm">Books</h1>
                     </div>
