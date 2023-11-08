@@ -3,7 +3,8 @@ import { Card, CardBody, CardHeader, Link as NextUiLink, CardFooter, Image } fro
 export default function AmazonBook() {
     return (
        
-        <>
+        <div className="relative">
+          
         <Card className="max-w-[400px] bg-white/80 rounded-2xl top-4">
         <CardHeader className="flex gap-3">
           <Image
@@ -26,7 +27,7 @@ export default function AmazonBook() {
         
         <hr className="w-[90%] mx-auto" />
         <CardFooter>
-          <NextUiLink className="text-blue-700"
+          <NextUiLink color="primary"
             isExternal
             showAnchorIcon
             href="https://www.amazon.com/Blender-3-3-Geometry-Nodes-Tutorials-ebook/dp/B0BFG6GYVN"
@@ -35,7 +36,7 @@ export default function AmazonBook() {
           </NextUiLink>
         </CardFooter>
       </Card>
-      </>
+      </div>
     
     )
 }
