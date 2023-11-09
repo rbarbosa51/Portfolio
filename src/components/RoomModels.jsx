@@ -4,7 +4,6 @@ import { memo, useRef,  useState } from "react"
 import { useNavigate } from "react-router-dom"
 
 
-
 function RoomModels() {
     const navigate = useNavigate();
     const [musicDialog, setMusicDialog] = useState(false)
@@ -137,7 +136,7 @@ function RoomModels() {
                     <div className="w-[90%] flex items-center justify-between">
                         <h1 className="text-center text-white text-xl">Music Time!</h1>
                         <div className="text-white cursor-pointer w-4 text-center rounded-full border-white hover:bg-white/80 hover:text-black " onClick={() => setMusicDialog(!musicDialog)}>X</div>
-                        {/* <Button variant="ghost" className="text-white aspect-square h-4">X</Button> */}
+                        
                     </div>
                     <iframe src="https://open.spotify.com/embed/playlist/615C4KPn26qAf8Gi4IbsBm?utm_source=generator" width="90%"  frameBorder="0" allowfullscreen="" allow="autoplay" loading="lazy"></iframe>
                     {/* <iframe width="90%" height="25%" scrolling="no" frameborder="no"  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1016862796&color=%23ff550033&auto_play=true&hide_related=true&    show_comments=false&buying=false&show_user=false&show_reposts=false&show_teaser=false&show_artwork=false&auto_play=true&visual=false"></iframe> */}
@@ -154,29 +153,6 @@ export default memo(RoomModels)
 
 height="25%"
 allow="autoplay"
-
-<Html>
-            <Modal isOpen={onOpen} onOpenChange={onOpenChange}>
-                <ModalContent>
-                    {(onClose) => (
-                        <>
-                            <ModalHeader className='flex flex-col gap-1'>Titulo</ModalHeader>
-                            <ModalBody>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, vero facere ducimus praesentium ullam error reprehenderit! Quod nemo et nobis!</p>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi quia eum fugiat similique iure officiis iusto, quas libero voluptas dolorem.</p>
-                            </ModalBody>
-                            <ModalFooter>
-                                <Button color="primary" onPress={onClose}>
-                                    Close
-                                </Button>
-                            </ModalFooter>
-                        </>
-                    )}
-                </ModalContent>
-            </Modal>
-            </Html>
-
-
 
 
 */

@@ -4,8 +4,6 @@ import {Progress} from "@nextui-org/react";
 export default function Loading() {
     const {progress} = useProgress()
     return (
-            // <Html center>{progress} % loaded</Html>
-            //<Html center>{progress.toFixed(2)}% Loaded</Html>
             <Html center>
                 <Progress size="lg" aria-label='Loading...' value={progress} showValueLabel={true} className='absolute w-96 -translate-x-1/2' />
             </Html>
