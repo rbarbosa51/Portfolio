@@ -74,6 +74,7 @@ export default {
       auto: "auto",
       cover: "cover",
       contain: "contain",
+      'cards': 'auto 85%'
     },
     blur: {
       0: "0",

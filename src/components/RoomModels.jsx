@@ -33,6 +33,10 @@ function RoomModels() {
         setMusicDialog(!musicDialog)
         
     }
+    const cardsClick = (e) => {
+        e.stopPropagation();
+        navigate('/cards')
+    }
     return (
         <>
             <mesh >
@@ -123,10 +127,10 @@ function RoomModels() {
                 </Html>
             </mesh>
             <mesh position={[-1.7,0.25,-0.7]}>
-                <primitive object={cards.scene} onClick={() => console.log('Cards')}/>
+                <primitive object={cards.scene} onClick={cardsClick}/>
                 <meshBasicMaterial />
                 <Html occlude position={[0.7,0.45,0.1]} >
-                    <div className="bg-gradient-to-b from-sky-50/50 to-sky-500/50 rounded-full px-2" onClick={() => console.log('Clicked Test label')}>
+                    <div className="bg-gradient-to-b from-sky-50/50 to-sky-500/50 rounded-full px-2" onClick={cardsClick}>
                         <h1 className="text-white text-sm">Cards</h1>
                     </div>
                 </Html>
