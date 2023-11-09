@@ -37,6 +37,10 @@ function RoomModels() {
         e.stopPropagation();
         navigate('/cards')
     }
+    const arcadeClick = (e) => {
+        e.stopPropagation();
+        navigate('/arcade');
+    }
     return (
         <>
             <mesh >
@@ -45,11 +49,11 @@ function RoomModels() {
             </mesh>
             <group>
                 <mesh >
-                    <primitive object={arcade.scene} onClick={(e) => {e.stopPropagation(); console.log('Arcade')}}/>
+                    <primitive object={arcade.scene} onClick={arcadeClick}/>
                     <meshBasicMaterial />
                 </mesh>
                 <Html occlude position={[-1,1.4,0.75]} >
-                    <div className="bg-gradient-to-b from-sky-50/50 to-sky-500/50 rounded-full px-2" onClick={() => console.log('Clicked Test label')}>
+                    <div className="bg-gradient-to-b from-sky-50/50 to-sky-500/50 rounded-full px-2" onClick={arcadeClick}>
                         <h1 className="text-white text-sm">Arcade</h1>
                     </div>
                 </Html>
