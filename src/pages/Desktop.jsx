@@ -12,19 +12,25 @@ const Window = ({id, title, width, height, url, children}) => {
     )
   }
 const Thanks = () => (
-        <div className='px-4'>
+        <div className='px-6'>
             <h1 className='text-center text-xl font-bold text-blue-600'>Thank You</h1>
-            <p className='first-letter:ml-2'>Thank you for visiting my site. I sincerely appreciate your visit, and from the bottom of my heart, I hope that you found it:</p>
+            <p className='first-letter:ml-2 text-justify'>Thank you for visiting my site. I sincerely appreciate your visit, and from the bottom of my heart, I hope that you found it:</p>
             <ul className='list-disc mt-2 font-bold'>
                 <li className='ml-4'>Entertaining</li>
                 <li className='ml-4'>Captivating</li>
                 <li className='ml-4'>Humorous</li>
                 <li className='ml-4'>Informative</li>
             </ul>
-            <p className='mt-2 first-letter:ml-2'>Please feel free to contact me, so we may work on future projects. I look forward to working for you.</p>
+            <p className='mt-2 first-letter:ml-2 text-justify'>Please feel free to contact me, so we may work on future projects. I look forward to working for you.</p>
             <p className='font-bold text-right mr-4 text-2xl font-cursive text-blue-600'>Rafael</p>
         </div>
     
+)
+const AboutMe = () => (
+    <div className='px-6'>
+        <h1 className='text-center text-xl font-bold text-blue-600 '>About Me</h1>
+        <p className='first-letter:ml-2 mt-2 text-justify'>Motivated, results-oriented, and dynamic professional with years of comprehensive experience in software development and engineering in innovative and constantly evolving environments. Skilled communicator, team player, and hands-on leader about to build relationships with teams, peers, and clients. Analytical and organized with fearless approach to problem solving and an aptitude for identifying opportunities to improve.</p>
+    </div>
 )
 const Trash = () => (
     <div className='relative flex top-4 left-2 gap-8'>
@@ -77,7 +83,7 @@ export default function Desktop() {
                     <Dropdown className='bg-slate-200/50'>
                         <DropdownTrigger><Button variant='' className='text-md md:text-xl hover:bg-slate-100 bg-gradient-to-r bg-clip-text from-blue-700 to-red-500 text-transparent'>Info</Button></DropdownTrigger>
                         <DropdownMenu>
-                            <DropdownItem key='about' onClick={() => {}} className='bg-gradient-to-r bg-clip-text from-blue-700 to-red-500 text-transparent'>Placeholder 1</DropdownItem>
+                            <DropdownItem key='about' onClick={() => openWinBox('About Me', 500, 350, null, <AboutMe/>)} className='bg-gradient-to-r bg-clip-text from-blue-700 to-red-500 text-transparent'>About Me</DropdownItem>
                             <DropdownItem key='exit' onClick={() => {}} className='bg-gradient-to-r bg-clip-text from-blue-700 to-red-500 text-transparent'>Placeholder 2</DropdownItem>
                         </DropdownMenu>
                     </Dropdown>
