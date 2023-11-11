@@ -26,8 +26,8 @@ export default function Scene() {
     return (
         <>
             <color attach={'background'} args={['#000000']}/>
-            <PerspectiveCamera makeDefault fov={30} position={[1.875,3.3403,1.8246]}/>
-            <CameraControls ref={cameraControlsRef} smoothTime={0.25} azimuthRotateSpeed={0.1} polarRotateSpeed={0.1} maxAzimuthAngle={Math.PI / 2}/>
+            <PerspectiveCamera makeDefault fov={30} position={[1.875,3.3403,1.8246]}  />
+            <CameraControls ref={cameraControlsRef} smoothTime={0.25} azimuthRotateSpeed={0.1} polarRotateSpeed={0.1} maxAzimuthAngle={Math.PI / 2} />
             
             <ambientLight intensity={3.0} />
             <directionalLight intensity={5} />

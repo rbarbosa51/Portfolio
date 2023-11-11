@@ -103,7 +103,7 @@ const Trash = () => (
             <div>deletedFile.txt</div>
         </div>
         <div className='flex flex-col justify-center items-center'>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-8 h-8 fill-red-500">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-8 h-8 fill-green-500">
               <path fillRule="evenodd" d="M1.5 6a2.25 2.25 0 012.25-2.25h16.5A2.25 2.25 0 0122.5 6v12a2.25 2.25 0 01-2.25 2.25H3.75A2.25 2.25 0 011.5 18V6zM3 16.06V18c0 .414.336.75.75.75h16.5A.75.75 0 0021 18v-1.94l-2.69-2.689a1.5 1.5 0 00-2.12 0l-.88.879.97.97a.75.75 0 11-1.06 1.06l-5.16-5.159a1.5 1.5 0 00-2.12 0L3 16.061zm10.125-7.81a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0z" clipRule="evenodd" />
             </svg>
             <div>spicyPicture.png</div>
@@ -188,16 +188,12 @@ export default function Desktop() {
             </div>
             {/* GitHub */}
             <div className='flex flex-col items-center justify-center text-xs md:text-sm absolute top-[35%] left-[20.5%] text-blue-600' onClick={() => window.open('https://github.com/rbarbosa51', '_blank')}>
-                {/* <svg className='h-12 w-12 text-blue-700' viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" fill='currentColor' ><g><path d="M12,0c-6.627,0 -12,5.508 -12,12.304c-0,5.436 3.438,10.048 8.206,11.675c0.6,0.114 0.82,-0.267 0.82,-0.592c-0,-0.293 -0.011,-1.262 -0.016,-2.291c-3.339,0.745 -4.043,-1.451 -4.043,-1.451c-0.546,-1.422 -1.333,-1.801 -1.333,-1.801c-1.088,-0.763 0.083,-0.747 0.083,-0.747c1.204,0.086 1.839,1.268 1.839,1.268c1.07,1.88 2.807,1.337 3.492,1.022c0.108,-0.795 0.419,-1.338 0.762,-1.645c-2.665,-0.311 -5.468,-1.366 -5.468,-6.08c0,-1.344 0.469,-2.441 1.237,-3.303c-0.125,-0.31 -0.535,-1.561 0.116,-3.256c0,0 1.008,-0.331 3.301,1.261c0.957,-0.273 1.984,-0.41 3.004,-0.414c1.019,0.004 2.047,0.141 3.006,0.414c2.29,-1.592 3.296,-1.261 3.296,-1.261c0.654,1.694 0.243,2.946 0.118,3.255c0.77,0.862 1.235,1.96 1.235,3.303c0,4.726 -2.807,5.766 -5.479,6.071c0.431,0.382 0.814,1.131 0.814,2.278c0,1.647 -0.014,2.972 -0.014,3.377c0,0.327 0.216,0.711 0.824,0.59c4.766,-1.629 8.2,-6.239 8.2,-11.673c-0,-6.795 -5.373,-12.304 -12,-12.304l-0,0Z" /><path d="M4.545,17.665c-0.026,0.062 -0.12,0.08 -0.206,0.038c-0.087,-0.04 -0.136,-0.123 -0.108,-0.185c0.026,-0.063 0.12,-0.08 0.207,-0.038c0.087,0.04 0.137,0.124 0.107,0.186l-0,-0.001Zm0.486,0.556c-0.057,0.055 -0.169,0.03 -0.245,-0.057c-0.078,-0.085 -0.093,-0.2 -0.035,-0.255c0.059,-0.054 0.168,-0.029 0.246,0.057c0.079,0.087 0.094,0.2 0.034,0.256l0,-0.001Zm0.473,0.709c-0.073,0.052 -0.194,0.003 -0.268,-0.106c-0.073,-0.11 -0.073,-0.241 0.002,-0.294c0.074,-0.052 0.193,-0.005 0.268,0.104c0.073,0.111 0.073,0.242 -0.002,0.296l0,-0Zm0.648,0.685c-0.065,0.074 -0.206,0.054 -0.308,-0.047c-0.105,-0.099 -0.134,-0.241 -0.068,-0.315c0.067,-0.074 0.207,-0.054 0.311,0.047c0.104,0.099 0.136,0.24 0.066,0.314l-0.001,0.001Zm0.895,0.397c-0.03,0.096 -0.164,0.14 -0.3,0.099c-0.136,-0.042 -0.225,-0.155 -0.197,-0.252c0.028,-0.097 0.163,-0.143 0.3,-0.099c0.136,0.042 0.225,0.154 0.197,0.252Zm0.982,0.074c0.003,0.101 -0.112,0.185 -0.255,0.187c-0.143,0.004 -0.259,-0.079 -0.261,-0.179c0,-0.102 0.113,-0.185 0.256,-0.188c0.143,-0.002 0.26,0.079 0.26,0.179l-0,0.001Zm0.913,-0.16c0.018,0.099 -0.082,0.201 -0.223,0.228c-0.139,0.026 -0.269,-0.035 -0.286,-0.133c-0.017,-0.102 0.083,-0.203 0.223,-0.23c0.141,-0.025 0.269,0.035 0.286,0.136l0,-0.001Z" /></g></svg> */}
                 <img width={'48px'} height={'48px'} src='https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg'/>
-                {/* <img src="https://raw.githubusercontent.com/devicons/devicon/v2.15.1/icons/github/github-original.svg" width={'42px'} height={'42px'} />     */}
                 <div className='underline bg-gradient-to-r bg-clip-text from-blue-700 to-red-500 text-transparent' >GitHub</div>
             </div>
             {/* Linked In */}
             <div className='flex flex-col items-center justify-center text-xs md:text-sm absolute top-[55%] left-[19.5%] text-blue-600' onClick={() => window.open('https://www.linkedin.com/in/rafaelbarbosa51/', '_blank')}>
                 <img width='48px' height='48px' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="" />
-
-                {/* <img src="https://raw.githubusercontent.com/devicons/devicon/v2.15.1/icons/github/github-original.svg" width={'42px'} height={'42px'} />     */}
                 <div className='underline bg-gradient-to-r bg-clip-text from-blue-700 to-red-500 text-transparent' >LinkedIn</div>
             </div>
             {/* Windows */}
