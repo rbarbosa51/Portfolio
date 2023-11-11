@@ -32,6 +32,34 @@ const AboutMe = () => (
         <p className='first-letter:ml-2 mt-2 text-justify'>Motivated, results-oriented, and dynamic professional with years of comprehensive experience in software development and engineering in innovative and constantly evolving environments. Skilled communicator, team player, and hands-on leader about to build relationships with teams, peers, and clients. Analytical and organized with fearless approach to problem solving and an aptitude for identifying opportunities to improve.</p>
     </div>
 )
+const HumanLanguages = () => (
+    <div className='px-6'>
+            <h1 className='text-center text-xl font-bold text-blue-600'>Languages</h1>
+            <p className='first-letter:ml-2 text-justify mt-2'>I speak the following Languages:</p>
+            <table className='table-fixed font-medium border border-black/20 mt-4' >
+                <thead className='bg-gray-100 border-b-2 border-black/20'>
+                    <tr>
+                        <th className='px-4'>Language</th>
+                        <th className='px-4'>Proficiency</th>
+                    </tr>
+                </thead>
+                <tbody className=''>
+                    <tr>
+                        <td className='px-4'>English</td>
+                        <td className='px-4'>Professional working proficiency</td>
+                    </tr>
+                    <tr>
+                        <td className='px-4 bg-gray-100'>Spanish</td>
+                        <td className='px-4 bg-gray-100'>Professional working proficiency</td>
+                    </tr>
+                    <tr>
+                        <td className='px-4'>German</td>
+                        <td className='px-4'>Beginner - Very Low Proficiency</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+)
 const Trash = () => (
     <div className='relative flex top-4 left-2 gap-8'>
         <div className='flex flex-col justify-center items-center'>
@@ -84,7 +112,8 @@ export default function Desktop() {
                         <DropdownTrigger><Button variant='' className='text-md md:text-xl hover:bg-slate-100 bg-gradient-to-r bg-clip-text from-blue-700 to-red-500 text-transparent'>Info</Button></DropdownTrigger>
                         <DropdownMenu>
                             <DropdownItem key='about' onClick={() => openWinBox('About Me', 500, 350, null, <AboutMe/>)} className='bg-gradient-to-r bg-clip-text from-blue-700 to-red-500 text-transparent'>About Me</DropdownItem>
-                            <DropdownItem key='exit' onClick={() => {}} className='bg-gradient-to-r bg-clip-text from-blue-700 to-red-500 text-transparent'>Placeholder 2</DropdownItem>
+                            <DropdownItem key='languages' onClick={() => openWinBox('Human Languages', 500, 300, null, <HumanLanguages />)} className='bg-gradient-to-r bg-clip-text from-blue-700 to-red-500 text-transparent'>Human Languages</DropdownItem>
+                            <DropdownItem key='languages' onClick={() => {}} className='bg-gradient-to-r bg-clip-text from-blue-700 to-red-500 text-transparent'>Placeholder 2</DropdownItem>
                         </DropdownMenu>
                     </Dropdown>
                 </div>
