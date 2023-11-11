@@ -63,7 +63,7 @@ export default function TCards() {
       })
     return (
         <div className="relative bg-gradient-to-br from-blue-400 to-pink-400 flex flex-col text-center items-center justify-center h-full text-white/80">
-            <h1 className="absolute top-2 w-72 left-1/2 -translate-x-1/2 text-3xl " >Inner Attributes</h1>
+            <h1 className="absolute top-2 w-72 left-1/2 -translate-x-1/2 text-3xl " >Know Me</h1>
             
             <div className="absolute hidden md:block top-16 left-1/2 -translate-x-1/2 text-xl">Grab a Card and throw it either left or right</div>
             {props.map(({ x, y, rot, scale }, i) => (
