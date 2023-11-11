@@ -342,6 +342,14 @@ export default {
         '"Courier New"',
         "monospace",
       ],
+      cursive: [
+        'Apple Chancery',
+        'Brush Script MT',
+        'Bradley Hand',
+        'Snell Roundhand',
+        'Comic Sans MS',
+        'cursive'
+      ]
     },
     fontSize: {
       xs: ["0.75rem", { lineHeight: "1rem" }],
