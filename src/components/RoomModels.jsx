@@ -41,6 +41,10 @@ function RoomModels() {
         e.stopPropagation();
         navigate('/arcade');
     }
+    const desktopClick = (e) => {
+        e.stopPropagation();
+        navigate('/desktop');
+    }
     return (
         <>
             <mesh >
@@ -95,10 +99,10 @@ function RoomModels() {
                 </Html>
             </mesh>
             <mesh >
-                <primitive object={computer3.scene} onClick={() => console.log('Computer 3')}/>
+                <primitive object={computer3.scene} onClick={desktopClick}/>
                 <meshBasicMaterial />
                 <Html occlude position={[-0.6,1.2,-1.3]} >
-                    <div className="bg-gradient-to-b from-sky-50/50 to-sky-500/50 rounded-full px-2" onClick={() => console.log('Clicked Test label')}>
+                    <div className="bg-gradient-to-b from-sky-50/50 to-sky-500/50 rounded-full px-2" onClick={desktopClick}>
                         <h1 className="text-white text-sm">Computer</h1>
                     </div>
                 </Html>

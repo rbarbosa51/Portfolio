@@ -1,6 +1,6 @@
 import { useLocation, Routes, Route } from "react-router-dom"
 import {animated, useTransition } from "react-spring"
-import {Room, Book, Cards, Arcade} from './pages'
+import {Room, Book, Cards, Arcade, Desktop} from './pages'
 import { NextUIProvider } from "@nextui-org/react"
 
 
@@ -19,10 +19,10 @@ function App() {
     <NextUIProvider>
       <Routes location={location}>
         <Route path="/" exact element={<Room />} />
-        
         <Route path="/book" exact element={<Book />} />
         <Route path="/cards" exact element={<Cards />} />
         <Route path="/arcade" exact element={<Arcade />} />
+        <Route path="/desktop" exact element={<Desktop />} />
       </Routes>
     </NextUIProvider>
   )
