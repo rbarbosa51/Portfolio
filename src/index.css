@@ -6,3 +6,12 @@
 html, body, #root {
     height: 100vh;
 }
+
+@layer utilities {
+    svg {
+        @apply text-blue-700;
+    }
+    img {
+        @apply text-blue-700;
+    }
+}
