@@ -2,7 +2,7 @@ import 'winbox/dist/css/winbox.min.css';
 import WinBox from 'react-winbox';
 import { useState } from 'react';
 import { Button, Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, } from '@nextui-org/react';
-
+import { useNavigate } from 'react-router-dom';
 
 const Window = ({id, title, url, children}) => {
     return (
@@ -30,7 +30,8 @@ const Thanks = () => {
 export default function Desktop() {
     const [windows, setWindows] = useState([]);
     const [windowCount, setWindowCount] = useState(0);
-    
+    const navigate = useNavigate();
+
     const openWinBox = (title, url, children) => {
       setWindows([<Window key={windowCount + 1} title={title} url={url} children={children}/>, ...windows])
       setWindowCount(prev => ++prev)
@@ -48,7 +49,7 @@ export default function Desktop() {
                         <DropdownTrigger><Button variant='' className='text-md md:text-xl hover:bg-slate-100'>File</Button></DropdownTrigger>
                         <DropdownMenu className=''>
                             <DropdownItem key='thanks' onClick={() => openWinBox('Thanks', null, <Thanks/>)}>Thanks</DropdownItem>
-                            <DropdownItem key='exit'>Exit</DropdownItem>
+                            <DropdownItem key='exit' onClick={() => navigate('/')}>Exit</DropdownItem>
                         </DropdownMenu>
                     </Dropdown>
                     <Dropdown className='bg-slate-200/50'>
