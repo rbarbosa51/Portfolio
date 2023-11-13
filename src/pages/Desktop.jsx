@@ -60,6 +60,13 @@ const HumanLanguages = () => (
             </table>
         </div>
 )
+const Terminal = () => (
+    <div className="mockup-code">
+      <pre data-prefix="$"><code>npm run needBadAssProgrammer</code></pre> 
+      <pre data-prefix=">" className="text-warning"><code>executing...</code></pre> 
+      <pre data-prefix=">" className="text-success"><code>Hire Rafael!</code></pre>
+    </div>
+)
 const Skills = () => (
     <div className='px-6'>
 
@@ -196,8 +203,22 @@ export default function Desktop() {
                 <img width='48px' height='48px' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="" />
                 <div className='underline bg-gradient-to-r bg-clip-text from-blue-700 to-red-500 text-transparent' >LinkedIn</div>
             </div>
+            {/* Terminal */}
+            <div className='flex flex-col items-center justify-center text-xs md:text-sm absolute bottom-[20%] right-[23.5%] text-blue-600' onClick={() => openWinBox('Terminal', 500, 170, null, <Terminal />)}>
+            <svg className='h-12 w-12 fill-black' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path fillRule="evenodd" d="M2.25 6a3 3 0 013-3h13.5a3 3 0 013 3v12a3 3 0 01-3 3H5.25a3 3 0 01-3-3V6zm3.97.97a.75.75 0 011.06 0l2.25 2.25a.75.75 0 010 1.06l-2.25 2.25a.75.75 0 01-1.06-1.06l1.72-1.72-1.72-1.72a.75.75 0 010-1.06zm4.28 4.28a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3z" clipRule="evenodd" />
+            </svg>
+                <div className='underline bg-gradient-to-r bg-clip-text from-blue-700 to-red-500 text-transparent' >Terminal</div>
+            </div>
             {/* Windows */}
             {windows}
         </div>
     )
 }
+
+
+// <div className="mockup-code">
+//           <pre data-prefix="$"><code>npm run needBadAssProgrammer</code></pre> 
+//           <pre data-prefix=">" className="text-warning"><code>executing...</code></pre> 
+//           <pre data-prefix=">" className="text-success"><code>Hire Rafael!</code></pre>
+//         </div>
