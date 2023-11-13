@@ -156,21 +156,15 @@ function RoomModels() {
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
                         </button>
                     </div>
-                    <iframe src="https://open.spotify.com/embed/playlist/615C4KPn26qAf8Gi4IbsBm?utm_source=generator" width="90%"  frameBorder="0" allowfullscreen="" allow="autoplay" loading="lazy"></iframe>
+                    <iframe src="https://open.spotify.com/embed/playlist/615C4KPn26qAf8Gi4IbsBm?utm_source=generator" width="90%"  frameBorder="0" allowFullScreen="" allow="autoplay" loading="lazy"></iframe>
                     {/* <iframe width="90%" height="25%" scrolling="no" frameborder="no"  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1016862796&color=%23ff550033&auto_play=true&hide_related=true&    show_comments=false&buying=false&show_user=false&show_reposts=false&show_teaser=false&show_artwork=false&auto_play=true&visual=false"></iframe> */}
                     {/* <Button className="text-white bg-blue-500 px-4 rounded-3xl" onClick={() => setMusicDialog(!musicDialog)}>Close</Button> */}
                 </div>
             </Html>
+            
         </>
     )
 }
 
 export default memo(RoomModels)
 
-/*
-
-height="25%"
-allow="autoplay"
-
-
-*/
