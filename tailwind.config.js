@@ -1011,5 +1011,5 @@ export default {
       50: "50",
     },
   },
-  plugins: [nextui()],
+  plugins: [nextui(), require('daisyui')],
 };

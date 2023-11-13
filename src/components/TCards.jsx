@@ -63,9 +63,9 @@ export default function TCards() {
       })
     return (
         <div className="relative bg-gradient-to-br from-blue-400 to-pink-400 flex flex-col text-center items-center justify-center h-full text-white/80">
-            <h1 className="absolute top-2 w-72 left-1/2 -translate-x-1/2 text-3xl " >Know Me</h1>
+            <h1 className="absolute top-2 w-72 left-1/2 -translate-x-1/2 text-6xl font-thin text-slate-200/80" >Know Me</h1>
             
-            <div className="absolute hidden md:block top-16 left-1/2 -translate-x-1/2 text-xl">Grab a Card and throw it either left or right</div>
+            <div className="absolute hidden md:block top-16 left-1/2 -translate-x-1/2 text-xl font-thin mt-2">Grab a Card and throw it either left or right</div>
             {props.map(({ x, y, rot, scale }, i) => (
               <animated.div className={'absolute  w-[300px] h-[200px] will-change-transform flex items-center justify-center touch-none'} key={i} style={{ x, y }}>
                 
