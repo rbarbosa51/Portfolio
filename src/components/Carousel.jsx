@@ -30,7 +30,7 @@ export default function Carousel() {
                 description={'This page is an example of Google\'s Mediapipe Solutions. The library is bult on top of TensorFlow Lite. It uses the hand landmark detection features to create a trail of hearts around the index finger.'}
                 badges={['mediapipe', 'material-components-web', 'JavaScript', 'Vite']}
                 url={'https://machine-learning-finger-trails.netlify.app/'}
-                stack={'Machine Learning'}
+                stack={'Machine_Learning'}
                 ></Card>
               </div> 
               <div id="item4" className="carousel-item w-full">
@@ -39,7 +39,7 @@ export default function Carousel() {
                 description={'This page is an example of TensorFlow.JS Toxicity Detection AI model. It also utilizes the Web Speech API to transpile your speech to text. While it is not error proof, it does illustrate the potential uses of Artificial Intelligence in detecting toxic language. '}
                 badges={['TensorFlow.JS', 'JavaScript', 'Vite']}
                 url={'https://rbarbosa51.github.io/TensorFlow.JS_Toxicity_Detector/'}
-                stack={'Machine Learning'}
+                stack={'Machine_Learning'}
                 ></Card>
               </div> 
 
@@ -52,6 +52,24 @@ export default function Carousel() {
                 stack={'Vanilla'}
                 ></Card>
               </div>
+              <div id="item6" className="carousel-item w-full">
+                <Card picture={'/projects/weather.png'} 
+                title={'Glass Weather Dashboard'}
+                description={'Glass Weather Dashboard is a webapp designed to enable a person to determine the current and 5 day forcasted weather condition for any arbitrary city. The webapp uses the Glassmorphism UI scheme.'}
+                badges={['JavaScript']}
+                url={'https://rbarbosa51.github.io/Glass-Weather-Dashboard/'}
+                stack={'Vanilla'}
+                ></Card>
+              </div>
+              <div id="item7" className="carousel-item w-full">
+                <Card picture={'/projects/particles.png'} 
+                title={'JSParticleEffect'}
+                description={'HTML5 Canvas Particles Example'}
+                badges={['JavaScript', 'Canvas']}
+                url={'https://rbarbosa51.github.io/JSParticleEffect/'}
+                stack={'Vanilla'}
+                ></Card>
+              </div>
             </div> 
             <div className="flex justify-center w-full py-2 gap-2">
               <a href="#item1" className="btn btn-sm">1</a> 
@@ -59,6 +77,8 @@ export default function Carousel() {
               <a href="#item3" className="btn btn-sm">3</a> 
               <a href="#item4" className="btn btn-sm">4</a>
               <a href="#item5" className="btn btn-sm">5</a>
+              <a href="#item6" className="btn btn-sm">6</a>
+              <a href="#item7" className="btn btn-sm">7</a>
             </div>
         </div>
     )

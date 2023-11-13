@@ -6,7 +6,7 @@ export default function Card({picture, title, description, badges, stack, url })
               <figure className="max-w-[500px] mx-auto"><img src={picture} /></figure>
               <div className="card-body">
                 <h2 className="card-title">
-                  {title}
+                  <div className="text-primary">{title}</div>
                   <div className="badge badge-secondary text-center mx-4">{stack}</div>
                 </h2>
                 <p>{description}</p>
