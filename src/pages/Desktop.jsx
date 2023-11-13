@@ -215,10 +215,3 @@ export default function Desktop() {
         </div>
     )
 }
-
-
-// <div className="mockup-code">
-//           <pre data-prefix="$"><code>npm run needBadAssProgrammer</code></pre> 
-//           <pre data-prefix=">" className="text-warning"><code>executing...</code></pre> 
-//           <pre data-prefix=">" className="text-success"><code>Hire Rafael!</code></pre>
-//         </div>
