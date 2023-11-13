@@ -12,6 +12,7 @@ export default function Carousel() {
                 badges={['NextJS', 'TypeScript' ,'Stripe-API', 'Zustand', 'TailwindCSS', 'daisyui']}
                 url={'https://westeros-coffee.vercel.app/'}
                 stack={'JAMStack'}
+                sourceCode={'https://github.com/rbarbosa51/westeros-coffee'}
                 ></Card>
               </div> 
 
@@ -22,6 +23,7 @@ export default function Carousel() {
                 badges={['Express', 'TypeScript', 'MongoDB', 'React', 'Prisma', 'RadixUI', 'Shadcn-ui']}
                 url={'https://girl-boss-app.netlify.app/'}
                 stack={'MERN'}
+                sourceCode={'https://github.com/rbarbosa51/girl-boss-app'}
                 ></Card>
               </div> 
               <div id="item3" className="carousel-item w-full">
@@ -31,6 +33,7 @@ export default function Carousel() {
                 badges={['mediapipe', 'material-components-web', 'JavaScript', 'Vite']}
                 url={'https://machine-learning-finger-trails.netlify.app/'}
                 stack={'Machine_Learning'}
+                sourceCode={'https://github.com/rbarbosa51/machine-learning-finger-trails'}
                 ></Card>
               </div> 
               <div id="item4" className="carousel-item w-full">
@@ -40,6 +43,7 @@ export default function Carousel() {
                 badges={['TensorFlow.JS', 'JavaScript', 'Vite']}
                 url={'https://rbarbosa51.github.io/TensorFlow.JS_Toxicity_Detector/'}
                 stack={'Machine_Learning'}
+                sourceCode={'https://github.com/rbarbosa51/TensorFlow.JS_Toxicity_Detector'}
                 ></Card>
               </div> 
 
@@ -50,6 +54,7 @@ export default function Carousel() {
                 badges={['JavaScript', 'ChartJS', 'Firebase', 'BulmaCSS']}
                 url={'https://rbarbosa51.github.io/whatacrypto-crypto-game/'}
                 stack={'Vanilla'}
+                sourceCode={'https://github.com/rbarbosa51/whatacrypto-crypto-game'}
                 ></Card>
               </div>
               <div id="item6" className="carousel-item w-full">
@@ -59,6 +64,7 @@ export default function Carousel() {
                 badges={['JavaScript']}
                 url={'https://rbarbosa51.github.io/Glass-Weather-Dashboard/'}
                 stack={'Vanilla'}
+                sourceCode={'https://github.com/rbarbosa51/Glass-Weather-Dashboard'}
                 ></Card>
               </div>
               <div id="item7" className="carousel-item w-full">
@@ -68,6 +74,7 @@ export default function Carousel() {
                 badges={['JavaScript', 'Canvas']}
                 url={'https://rbarbosa51.github.io/JSParticleEffect/'}
                 stack={'Vanilla'}
+                sourceCode={'https://github.com/rbarbosa51/JSParticleEffect'}
                 ></Card>
               </div>
             </div> 
