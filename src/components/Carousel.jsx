@@ -24,22 +24,32 @@ export default function Carousel() {
                 stack={'MERN'}
                 ></Card>
               </div> 
-
               <div id="item3" className="carousel-item w-full">
+                <Card picture={'/projects/mlfinger.png'} 
+                title={'Machine Learning Finger Trails'}
+                description={'This page is an example of Google\'s Mediapipe Solutions. The library is bult on top of TensorFlow Lite. It uses the hand landmark detection features to create a trail of hearts around the index finger.'}
+                badges={['mediapipe', 'material-components-web', 'JavaScript', 'Vite']}
+                url={'https://machine-learning-finger-trails.netlify.app/'}
+                stack={'Machine Learning'}
+                ></Card>
+              </div> 
+              <div id="item4" className="carousel-item w-full">
                 <Card picture={'/projects/toxicity.png'} 
                 title={'TensorFlow.JS Toxicity Detector'}
                 description={'This page is an example of TensorFlow.JS Toxicity Detection AI model. It also utilizes the Web Speech API to transpile your speech to text. While it is not error proof, it does illustrate the potential uses of Artificial Intelligence in detecting toxic language. '}
                 badges={['TensorFlow.JS', 'JavaScript', 'Vite']}
                 url={'https://rbarbosa51.github.io/TensorFlow.JS_Toxicity_Detector/'}
-                stack={'Vanilla'}
+                stack={'Machine Learning'}
                 ></Card>
               </div> 
 
-              <div id="item4" className="carousel-item w-full">
-                <Card picture={'https://picsum.photos/id/78/300/200'} 
-                title={'Test Titulo'}
-                description={'Description Basica'}
-                badges={['Excellent', 'C++', 'HTML']}
+              <div id="item5" className="carousel-item w-full">
+                <Card picture={'/projects/whatacrypto.png'} 
+                title={'Whatacrypto Crypto Game'}
+                description={'WhataCrypto is a cryptocurrency game that allows people to make decisions on how and when to buy and sell crypto. WhataCrypto promotes strategic thinking and gives people opportunities to learn in a low stakes environment.'}
+                badges={['JavaScript', 'ChartJS', 'Firebase', 'BulmaCSS']}
+                url={'https://rbarbosa51.github.io/whatacrypto-crypto-game/'}
+                stack={'Vanilla'}
                 ></Card>
               </div>
             </div> 
@@ -48,6 +58,7 @@ export default function Carousel() {
               <a href="#item2" className="btn btn-sm">2</a> 
               <a href="#item3" className="btn btn-sm">3</a> 
               <a href="#item4" className="btn btn-sm">4</a>
+              <a href="#item5" className="btn btn-sm">5</a>
             </div>
         </div>
     )
