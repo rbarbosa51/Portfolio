@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom"
 function RoomModels() {
     const navigate = useNavigate();
     const [musicDialog, setMusicDialog] = useState(false)
-    const [contactDialog,setContactDialog] = useState(false)
 
     const room = useGLTF('/models/room.glb')
     const arcade = useGLTF('/models/arcade.glb')
@@ -162,8 +161,6 @@ function RoomModels() {
                         </button>
                     </div>
                     <iframe src="https://open.spotify.com/embed/playlist/615C4KPn26qAf8Gi4IbsBm?utm_source=generator" width="90%"  frameBorder="0" allowFullScreen="" allow="autoplay" loading="lazy"></iframe>
-                    {/* <iframe width="90%" height="25%" scrolling="no" frameborder="no"  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1016862796&color=%23ff550033&auto_play=true&hide_related=true&    show_comments=false&buying=false&show_user=false&show_reposts=false&show_teaser=false&show_artwork=false&auto_play=true&visual=false"></iframe> */}
-                    {/* <Button className="text-white bg-blue-500 px-4 rounded-3xl" onClick={() => setMusicDialog(!musicDialog)}>Close</Button> */}
                 </div>
             </Html>
             <mesh >
