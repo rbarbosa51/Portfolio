@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom"
 function RoomModels() {
     const navigate = useNavigate();
     const [musicDialog, setMusicDialog] = useState(false)
+    const [contactDialog,setContactDialog] = useState(false)
 
     const room = useGLTF('/models/room.glb')
     const arcade = useGLTF('/models/arcade.glb')
@@ -19,6 +20,8 @@ function RoomModels() {
     const picture1 = useGLTF('/models/picture1.glb')
     const picture2 = useGLTF('/models/picture2.glb')
     const cards = useGLTF('/models/cards.glb')
+    const cell = useGLTF('/models/cell.glb')
+
     const resumeClick = (e) => {
         e.stopPropagation();
         window.open('https://drive.google.com/file/d/1TpmA0hnA6PjHiS66V1CX972sd64GfHQq/view?usp=sharing', '_blank')
@@ -47,6 +50,10 @@ function RoomModels() {
     const projectsClick = (e) => {
         e.stopPropagation();
         navigate('/projects');
+    }
+    const cellClick = (e) => {
+        e.stopPropagation();
+        setContactDialog(!contactDialog);
     }
     return (
         <>
@@ -160,7 +167,15 @@ function RoomModels() {
                     {/* <Button className="text-white bg-blue-500 px-4 rounded-3xl" onClick={() => setMusicDialog(!musicDialog)}>Close</Button> */}
                 </div>
             </Html>
-            
+            <mesh >
+                <primitive object={cell.scene} onClick={cellClick}/>
+                <meshBasicMaterial />
+                {/* <Html occlude position={[0.4,0.45,0.3636]} >
+                    <div className="bg-gradient-to-b from-sky-50/50 to-sky-500/50 rounded-full px-2 w-24" onClick={() => setContactDialog(!contactDialog)}>
+                        <h1 className="text-white text-sm">Contact Me</h1>
+                    </div>
+                </Html> */}
+            </mesh>
         </>
     )
 }
