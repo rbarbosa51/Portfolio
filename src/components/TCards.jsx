@@ -36,11 +36,11 @@ export default function TCards() {
       })) 
       const bind = useDrag(({ args: [index], down, movement: [mx], direction: [xDir], velocity }) => {
         const trigger = velocity[0] > 0 
-        console.log(velocity[0])
+        
         const dir = xDir < 0 ? -1 : 1 
         if (!down && trigger) gone.add(index) 
         api.start(i => {
-         console.log(i)
+        
           if (index !== i) return 
           const isGone = gone.has(index)
           const x = isGone ? (100 + window.innerWidth * 0.5) * dir : down ? mx : 0 

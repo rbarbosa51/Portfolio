@@ -14,7 +14,7 @@ function App() {
   //   exitBeforeEnter: true
     
   // });
-
+  console.log('%cThank You for visiting my Portfolio. Please consider hiring me!', 'font-weight: thin; color: #ff0000; font-size:3rem')
   return (
     <NextUIProvider>
       <Routes location={location}>
