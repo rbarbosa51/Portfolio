@@ -1,4 +1,3 @@
-//import { Button } from "@nextui-org/react";
 import { useGLTF, useTexture, Html } from "@react-three/drei"
 import { memo, useRef,  useState } from "react"
 import { useNavigate } from "react-router-dom"

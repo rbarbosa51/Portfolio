@@ -1,6 +1,6 @@
 import RoomModels from "./RoomModels"
 import { CameraControls, PerspectiveCamera } from "@react-three/drei"
-import { useLayoutEffect, useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect } from "react";
 import {useControls, button, } from 'leva';
 
 export default function Scene() {
