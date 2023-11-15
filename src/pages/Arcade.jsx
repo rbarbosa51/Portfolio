@@ -1,7 +1,5 @@
 import Game from "../components/Game"
 import { useNavigate } from "react-router-dom"
-import { Button } from "@nextui-org/react"
-
 
 export default function Arcade() {
     const navigate = useNavigate()
@@ -9,10 +7,7 @@ export default function Arcade() {
     return (
         <div className="w-full h-screen relative">
             <Game />
-            <Button className="absolute z-100 top-0 left-20 rounded-full p-2" 
-                color="primary"
-                onClick={() => navigate('/')}
-            >Go Back</Button>
+            <button className="absolute bg-primary hover:bg-primary/80 rounded-xl px-6 py-2.5 text-sm text-white top-4 left-20" onClick={() => navigate('/')}>Back</button>
         </div>
     )
 }
