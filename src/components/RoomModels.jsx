@@ -53,7 +53,7 @@ function RoomModels() {
     }
     const cellClick = (e) => {
         e.stopPropagation();
-        setContactDialog(!contactDialog);
+        navigate('/cell')
     }
     return (
         <>
@@ -170,11 +170,11 @@ function RoomModels() {
             <mesh >
                 <primitive object={cell.scene} onClick={cellClick}/>
                 <meshBasicMaterial />
-                {/* <Html occlude position={[0.4,0.45,0.3636]} >
-                    <div className="bg-gradient-to-b from-sky-50/50 to-sky-500/50 rounded-full px-2 w-24" onClick={() => setContactDialog(!contactDialog)}>
+                <Html occlude position={[0.4,0.45,0.3636]} >
+                    <div className="bg-gradient-to-b from-sky-50/50 to-sky-500/50 rounded-full px-2 w-24" onClick={cellClick}>
                         <h1 className="text-white text-sm">Contact Me</h1>
                     </div>
-                </Html> */}
+                </Html>
             </mesh>
         </>
     )
