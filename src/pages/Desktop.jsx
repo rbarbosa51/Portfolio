@@ -177,7 +177,7 @@ export default function Desktop() {
                         <DropdownTrigger><Button variant='' className='text-md md:text-xl hover:bg-slate-100  bg-gradient-to-r bg-clip-text from-blue-700 to-red-500 text-transparent'>File</Button></DropdownTrigger>
                         <DropdownMenu className=''>
                             <DropdownItem key='thanks' onClick={() => openWinBox('Thanks', 500, 350, null, <Thanks/>)} className='bg-gradient-to-r bg-clip-text from-blue-700 to-red-500 text-transparent'>Thanks</DropdownItem>
-                            <DropdownItem key='exit' onClick={() => navigate('/')} className='bg-gradient-to-r bg-clip-text from-blue-700 to-red-500 text-transparent'>Logout</DropdownItem>
+                            <DropdownItem key='exit' onClick={() => navigate('/room')} className='bg-gradient-to-r bg-clip-text from-blue-700 to-red-500 text-transparent'>Logout</DropdownItem>
                         </DropdownMenu>
                     </Dropdown>
                     <Dropdown className='bg-slate-200/50'>
