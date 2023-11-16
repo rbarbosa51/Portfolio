@@ -1,7 +1,8 @@
 import Game from "../components/Game"
 import { useNavigate } from "react-router-dom"
+import { memo } from "react"
 
-export default function Arcade() {
+function Arcade() {
     const navigate = useNavigate()
     
     return (
@@ -11,3 +12,4 @@ export default function Arcade() {
         </div>
     )
 }
+export default memo(Arcade)

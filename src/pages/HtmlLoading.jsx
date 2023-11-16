@@ -1,6 +1,6 @@
+import { memo } from "react"
 
-
-export default function Loading() {
+function HtmlLoading() {
     
     return (
             <div className="h-screen bg-slate-200 flex justify-center items-center">
@@ -8,3 +8,4 @@ export default function Loading() {
             </div>
     )
 }
+export default memo(HtmlLoading)

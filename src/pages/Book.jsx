@@ -1,7 +1,8 @@
 import AmazonBook from "../components/AmazonBook"
-
 import { useNavigate } from 'react-router-dom'
-export default function Book() {
+import { memo } from "react";
+
+function Book() {
     const navigate = useNavigate();
     return (
         <div className='h-screen bg-gradient-to-br from-blue-400 to-pink-400'> 
@@ -12,3 +13,4 @@ export default function Book() {
         </div>
     )
 }
+export default memo(Book);

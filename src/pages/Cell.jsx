@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
+import { memo } from 'react';
 
-export default function Cell() {
+function Cell() {
     const navigate = useNavigate();
 
     return (
@@ -29,3 +30,4 @@ export default function Cell() {
         </div>
     )
 }
+export default memo(Cell);
