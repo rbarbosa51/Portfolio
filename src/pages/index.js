@@ -6,4 +6,4 @@ export {default as Arcade} from './Arcade'
 export {default as Desktop} from './Desktop'
 export {default as Projects} from './Projects'
 export {default as Cell} from './Cell'
-
+export {default as HtmlLoading} from './HtmlLoading'

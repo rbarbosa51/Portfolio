@@ -1,7 +1,15 @@
+import { lazy , Suspense} from "react"
 import { useLocation, Routes, Route } from "react-router-dom"
-import {animated, useTransition } from "react-spring"
-import {Room, Book, Cards, Arcade, Desktop, Projects, Cell} from './pages'
 import { NextUIProvider } from "@nextui-org/react"
+//import {animated, useTransition } from "react-spring"
+import {HtmlLoading} from './pages'
+const Room = lazy(() => import('./pages/Room'))
+const Cards = lazy(() => import('./pages/Cards'))
+const Desktop = lazy(() => import('./pages/Desktop'))
+const Projects = lazy(() => import('./pages/Projects'))
+const Cell = lazy(() => import('./pages/Cell'))
+const Arcade = lazy(() => import('./pages/Arcade'))
+const Book = lazy(() => import('./pages/Book'))
 
 
 function App() {
@@ -18,13 +26,13 @@ function App() {
   return (
     <NextUIProvider>
       <Routes location={location}>
-        <Route path="/" exact element={<Room />} />
-        <Route path="/book" exact element={<Book />} />
-        <Route path="/cards" exact element={<Cards />} />
-        <Route path="/arcade" exact element={<Arcade />} />
-        <Route path="/desktop" exact element={<Desktop />} />
-        <Route path="/projects" exact element={<Projects />} />
-        <Route path="/cell" exact element={<Cell />} />
+        <Route path="/" exact element={<Suspense fallback={<HtmlLoading />}><Room /></Suspense> } />
+        <Route path="/book" exact element={<Suspense fallback={<HtmlLoading />}><Book /></Suspense>} />
+        <Route path="/cards" exact element={<Suspense fallback={<HtmlLoading />}><Cards /></Suspense>}/>
+        <Route path="/arcade" exact element={<Suspense fallback={<HtmlLoading />}><Arcade /></Suspense>} />
+        <Route path="/desktop" exact element={<Suspense fallback={<HtmlLoading />}><Desktop /></Suspense>} />
+        <Route path="/projects" exact element={<Suspense fallback={<HtmlLoading />}><Projects /></Suspense>} />
+        <Route path="/cell" exact element={<Suspense fallback={<HtmlLoading />}><Cell /></Suspense>} />
       </Routes>
     </NextUIProvider>
   )
