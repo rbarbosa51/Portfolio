@@ -20,7 +20,6 @@ function App() {
   //   leave: { opacity:0.3,filter: 'blur(100px)', transform: ' rotate(-180deg)'},
   //   config: {duration: 750},
   //   exitBeforeEnter: true
-    
   // });
   console.log('%cThank You for visiting my Portfolio. Please consider hiring me!', 'font-weight: thin; color: #ff0000; font-size:3rem')
   return (
