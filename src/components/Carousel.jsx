@@ -20,7 +20,7 @@ export default function Carousel() {
                 <Card picture={'/projects/girlboss.png'} 
                 title={'Girl Boss App'}
                 description={'This is the Girl Boss App, a SPA MERN site. It provides a set of tools for organizational purposes. It includes a KanBan board, a Scheduler, and Quotes. Please enjoy'}
-                badges={['Express', 'TypeScript', 'MongoDB', 'React', 'Prisma', 'RadixUI', 'Shadcn-ui']}
+                badges={['Express', 'TypeScript', 'MongoDB', 'React','React-Router' , 'Prisma', 'RadixUI', 'Shadcn-ui']}
                 url={'https://girl-boss-app.netlify.app/'}
                 stack={'MERN'}
                 sourceCode={'https://github.com/rbarbosa51/girl-boss-app'}
