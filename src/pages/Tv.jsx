@@ -1,10 +1,16 @@
-import {animate, useScroll} from 'framer-motion'
+import {animate, useScroll, useSpring, motion} from 'framer-motion'
 import {useRef, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 
 export default function Tv() {
     const navigate = useNavigate();
+    const {scrollYProgress} = useScroll();
     const animControl = useRef();
+    const scaleX = useSpring(scrollYProgress, {
+        stiffness: 100,
+        damping: 30,
+        restDelta: 0.001
+      });
     useScroll().scrollYProgress.on('change', (yProgress) => {
       if (!animControl.current) return;
       animControl.current.time = yProgress * animControl.current.duration;
@@ -59,8 +65,11 @@ export default function Tv() {
         ])
         animControl.current.pause()
       }, [])
+      
     return (
+        <>
         <div className="tv ">
+            <motion.div className='z-100 fixed top-0 left-0 right-0 origin0 h-1 bg-[#ebe8eb] neonShadow' style={{scaleX}}/>
             <div className='h-full w-full fixed'>
                 <h1 id='text0' className='absolute opacity-1 left-1/2 -translate-x-1/2 bottom-4 neonText font-thin font-sans text-6xl'>Scroll to the Bottom</h1>
                 <h1 id='text1' className='absolute opacity-0 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2  neonText font-thin font-sans text-6xl'>Hello</h1>
@@ -83,5 +92,6 @@ export default function Tv() {
                 <button id='btnBack' className='absolute opacity-0 left-1/2 -translate-x-1/2 bottom-4 neonText font-thin font-sans text-4xl p-4 border rounded-xl' onClick={goBack}>Go Back</button>
             </div>
         </div>
+        </>
     )
 }
