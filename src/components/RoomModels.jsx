@@ -54,6 +54,10 @@ function RoomModels() {
         e.stopPropagation();
         navigate('/cell')
     }
+    const tvClick = (e) => {
+        e.stopPropagation();
+        navigate('/tv');
+    }
     return (
         <>
             <mesh >
@@ -117,10 +121,10 @@ function RoomModels() {
                 </Html>
             </mesh>
             <mesh >
-                <primitive object={tv.scene} onClick={() => console.log('TV')} />
+                <primitive object={tv.scene} onClick={tvClick} />
                 <meshBasicMaterial />
                 <Html occlude position={[0.45,0.95,-1.1]} >
-                    <div className="bg-gradient-to-b from-sky-50/50 to-sky-500/50 rounded-full px-2" onClick={() => console.log('Clicked Test label')}>
+                    <div className="bg-gradient-to-b from-sky-50/50 to-sky-500/50 rounded-full px-2" onClick={tvClick}>
                         <h1 className="text-white text-sm">Tv</h1>
                     </div>
                 </Html>

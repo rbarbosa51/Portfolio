@@ -2,7 +2,7 @@ import { lazy , Suspense} from "react"
 import { useLocation, Routes, Route } from "react-router-dom"
 import { NextUIProvider } from "@nextui-org/react"
 //import {animated, useTransition } from "react-spring"
-import {First, Cards, Desktop, Projects, Cell, Arcade, Book, HtmlLoading} from './pages'
+import {First, Cards, Desktop, Projects, Cell, Arcade, Book,Tv, HtmlLoading} from './pages'
 const Room = lazy(() => import('./pages/Room'))
 
 function App() {
@@ -26,6 +26,7 @@ function App() {
         <Route path="/desktop" exact element={<Desktop />} />
         <Route path="/projects" exact element={<Projects />} />
         <Route path="/cell" exact element={<Cell />} />
+        <Route path="tv" exact element={<Tv />} />
       </Routes>
     </NextUIProvider>
   )
