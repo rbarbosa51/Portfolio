@@ -20,9 +20,6 @@ export default function Tv() {
     }
     useEffect(() => {
         animControl.current = animate([
-          // ['#ball', {transform: `translate(${(window.innerWidth / 2) - 48}px, ${window.innerHeight / 2 - 48}px)`}, {ease: 'linear', duration: 3.0}],
-          // ['#ball', {top: '50%'}, {ease: 'easeOut', duration: 2.0}],
-          // ['#ball', {transform: `scaleX(2.0, 0.1)`}, {ease: 'linear', duration: 1.0}],
           ['#text0', {opacity: 0}, {ease: 'linear', duration: 2.0}],
           ['#text1', {opacity: 1}, {ease: 'linear', duration: 2.0}],
           ['#text1', {opacity: 0 }, {ease: 'linear', duration: 2.0}],
@@ -59,16 +56,12 @@ export default function Tv() {
           ['#text12', {opacity: 1}, {ease: 'linear', duration: 2.0}],
           ['#text12', {opacity: 0 }, {ease: 'linear', duration: 2.0}],
           ['#btnBack', {opacity: 1}, {ease: 'linear', duration: 1.0}]
-          
-          
-    
         ])
         animControl.current.pause()
       }, [])
       
     return (
-        <>
-        <div className="tv ">
+        <div className="tv">
             <motion.div className='z-100 fixed top-0 left-0 right-0 origin0 h-1 bg-[#ebe8eb] neonShadow' style={{scaleX}}/>
             <div className='h-full w-full fixed'>
                 <h1 id='text0' className='absolute opacity-1 left-1/2 -translate-x-1/2 bottom-4 neonText font-thin font-sans text-6xl'>Scroll to the Bottom</h1>
@@ -92,6 +85,6 @@ export default function Tv() {
                 <button id='btnBack' className='absolute opacity-0 left-1/2 -translate-x-1/2 bottom-4 neonText font-thin font-sans text-4xl p-4 border rounded-xl' onClick={goBack}>Go Back</button>
             </div>
         </div>
-        </>
+        
     )
 }
