@@ -1,14 +1,16 @@
 import {animate, useScroll} from 'framer-motion'
 import {useRef, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 export default function Tv() {
+    const navigate = useNavigate();
     const animControl = useRef();
     useScroll().scrollYProgress.on('change', (yProgress) => {
       if (!animControl.current) return;
       animControl.current.time = yProgress * animControl.current.duration;
     })
     const goBack = () => {
-      console.log("Go back")
+      navigate('/room');
     }
     useEffect(() => {
         animControl.current = animate([
