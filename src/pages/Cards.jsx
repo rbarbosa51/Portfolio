@@ -7,7 +7,7 @@ export default function Cards() {
     return (
         <div className="h-screen relative">
             <TCards />
-            <Button className="absolute top-4 left-4" color="primary" onClick={() => navigate('/room')}>Back</Button>
+            <Button className="absolute top-4 left-4 neonText" color="primary" onClick={() => navigate('/room')}>Back</Button>
         </div>
     )
 }

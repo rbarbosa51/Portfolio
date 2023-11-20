@@ -159,8 +159,8 @@ function RoomModels() {
             <Html position={[0.3,2,0.7]} className={`absolute top-1/2 left-1/2 -translate-x-1/2 ${musicDialog === false ? 'hidden' : ''}`}>
                 <div className="bg-white/20 rounded-2xl w-96 flex flex-col justify-between items-center p-4">
                     <div className="w-[90%] flex items-center justify-between ">
-                        <h1 className="text-center text-white text-xl">Music Time!</h1>
-                        <button className="btn btn-circle bg-slate-100/30 border-none mb-4" onClick={() => setMusicDialog(!musicDialog)}>
+                        <h1 className="text-center text-white text-xl ">Music Time!</h1>
+                        <button className="btn btn-circle border-none mb-2 bg-white/80 hover:neonShadow" onClick={() => setMusicDialog(!musicDialog)}>
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
                         </button>
                     </div>

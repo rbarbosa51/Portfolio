@@ -17,7 +17,7 @@ export default function Card({picture, title, description, badges, stack, url, s
                 </div>
                 <div>Source: <a className="text-primary underline" href={`${sourceCode}`} target="_blank">{sourceCode}</a></div>
                 <div className="card-actions mt-2">
-                    <button className="btn btn-outline bg-primary hover:bg-primary/80 border-none mx-auto" onClick={() => window.open(url, '_blank')}>{title}</button>
+                    <button className="btn btn-outline bg-primary hover:bg-primary/80 border-none mx-auto hover:neonText" onClick={() => window.open(url, '_blank')}>{title}</button>
                 </div>
               </div>
             </div>
