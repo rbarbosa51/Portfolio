@@ -6,6 +6,28 @@
     html, body, #root {
         height: 100vh;
     }
+    ::-webkit-scrollbar {
+        @apply hidden md:block w-2;
+        background-color: #06083c;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #fff;
+        height: 30px;
+        box-shadow: 
+        0 0 7px #0fa,
+        0 0 10px #0fa,
+        0 0 21px #0fa,
+        0 0 42px #0fa,
+        0 0 82px #0fa,
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 151px #0fa,
+        0 0 183px #0fa,
+        0 0 200px #0fa;
+
+        border-radius: 1rem;
+    }
+
 }
 
 @layer utilities {

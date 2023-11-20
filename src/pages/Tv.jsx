@@ -64,25 +64,25 @@ export default function Tv() {
         <div className="tv">
             <motion.div className='z-100 fixed top-0 left-0 right-0 origin0 h-1 bg-[#ebe8eb] neonShadow' style={{scaleX}}/>
             <div className='h-full w-full fixed'>
-                <h1 id='text0' className='absolute opacity-1 left-1/2 -translate-x-1/2 bottom-4 neonText font-thin font-sans text-6xl'>Scroll to the Bottom</h1>
-                <h1 id='text1' className='absolute opacity-0 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2  neonText font-thin font-sans text-6xl'>Hello</h1>
-                <h1 id='text2' className='absolute opacity-0 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2  neonText font-thin font-sans text-6xl text-center'>Are you looking for a Web Developer?</h1>
+                <h1 id='text0' className='absolute opacity-1 left-1/2 -translate-x-1/2 bottom-4 neonText font-thin font-sans text-5xl lg:text-6xl'>Scroll to the Bottom</h1>
+                <h1 id='text1' className='absolute opacity-0 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2  neonText font-thin font-sans text-5xl lg:text-6xl'>Hello</h1>
+                <h1 id='text2' className='absolute opacity-0 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2  neonText font-thin font-sans text-5xl lg:text-6xl text-center'>Are you looking for a Web Developer?</h1>
                 <div id='divider1' className='absolute top-0 bg-[#06083c] h-screen w-screen -translate-x-[100%] '></div>
-                <h1 id='text3' className='absolute opacity-0 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2  neonText font-thin font-sans text-6xl text-center'>Are you concerned about hiring the wrong candidate?</h1>
-                <h1 id='text4' className='absolute opacity-0 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2  neonText font-thin font-sans text-6xl text-center'>A bad hire can create a toxic environment.</h1>
+                <h1 id='text3' className='absolute opacity-0 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2  neonText font-thin font-sans text-5xl lg:text-6xl text-center'>Are you concerned about hiring the wrong candidate?</h1>
+                <h1 id='text4' className='absolute opacity-0 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2  neonText font-thin font-sans text-5xl lg:text-6xl text-center'>A bad hire can create a toxic environment.</h1>
                 <div id='divider2' className='absolute top-0 bg-[#d95659] h-screen w-screen translate-x-[100%] '></div>
-                <h1 id='text5' className='absolute opacity-0 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2  neonText font-thin font-sans text-6xl text-center'>Remember: a bad apple spoils the bunch</h1>
-                <h1 id='text6' className='absolute opacity-0 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2  neonText font-thin font-sans text-6xl text-center'>Fear Not</h1>
+                <h1 id='text5' className='absolute opacity-0 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2  neonText font-thin font-sans text-5xl lg:text-6xl text-center'>Remember: a bad apple spoils the bunch</h1>
+                <h1 id='text6' className='absolute opacity-0 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2  neonText font-thin font-sans text-5xl lg:text-6xl text-center'>Fear Not</h1>
                 <div id='divider3' className='absolute top-0 bg-[#aadbd0] h-screen w-screen -translate-x-[100%] '></div>
-                <h1 id='text7' className='absolute opacity-0 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2  neonText font-thin font-sans text-6xl text-center'>Do you want a candidate who will prioritize the team over the individual</h1>
-                <h1 id='text8' className='absolute opacity-0 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2  neonText font-thin font-sans text-6xl text-center'>Do you want someone who will prioritize your team's Objectives and Key Results Indicators</h1>
+                <h1 id='text7' className='absolute opacity-0 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2  neonText font-thin font-sans text-5xl lg:text-6xl text-center'>Do you want a candidate who will prioritize the team over the individual</h1>
+                <h1 id='text8' className='absolute opacity-0 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2  neonText font-thin font-sans text-5xl lg:text-6xl text-center'>Do you want someone who will prioritize your team's Objectives and Key Results Indicators</h1>
                 <div id='divider4' className='absolute top-0 bg-[#34395f] h-screen w-screen translate-x-[100%] '></div>
-                <h1 id='text9' className='absolute opacity-0 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2  neonText font-thin font-sans text-6xl text-center'>A hire with the drive to continue self improving for the benefit of your team</h1>
-                <h1 id='text10' className='absolute opacity-0 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2  neonText font-thin font-sans text-6xl text-center'>No Drama, No Whinning...</h1>
+                <h1 id='text9' className='absolute opacity-0 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2  neonText font-thin font-sans text-5xl lg:text-6xl text-center'>A hire with the drive to continue self improving for the benefit of your team</h1>
+                <h1 id='text10' className='absolute opacity-0 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2  neonText font-thin font-sans text-5xl lg:text-6xl text-center'>No Drama, No Whinning...</h1>
                 <div id='divider5' className='absolute top-0 bg-[#f33660] h-screen w-screen -translate-x-[100%] '></div>
-                <h1 id='text11' className='absolute opacity-0 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2  neonText font-thin font-sans text-6xl text-center'>Just Pure Work Ethics</h1>
-                <h1 id='text12' className='absolute opacity-0 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2  neonText font-thin font-sans text-6xl text-center'>Hire me!!!</h1>
-                <button id='btnBack' className='absolute opacity-0 left-1/2 -translate-x-1/2 bottom-4 neonText font-thin font-sans text-4xl p-4 border rounded-xl' onClick={goBack}>Go Back</button>
+                <h1 id='text11' className='absolute opacity-0 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2  neonText font-thin font-sans text-5xl lg:text-6xl text-center'>Just Pure Work Ethics</h1>
+                <h1 id='text12' className='absolute opacity-0 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2  neonText font-thin font-sans text-5xl lg:text-6xl text-center'>Hire me!!!</h1>
+                <button id='btnBack' className='absolute opacity-0 left-1/2 -translate-x-1/2 bottom-4 neonText font-thin font-sans text-3xl lg:text-4xl p-4 border rounded-xl' onClick={goBack}>Go Back</button>
             </div>
         </div>
         
