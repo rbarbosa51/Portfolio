@@ -1,12 +1,22 @@
-import { lazy , Suspense} from "react"
-import { useLocation, Routes, Route } from "react-router-dom"
-import { NextUIProvider } from "@nextui-org/react"
+import { lazy, Suspense } from "react";
+import { useLocation, Routes, Route } from "react-router-dom";
+import { NextUIProvider } from "@nextui-org/react";
 //import {animated, useTransition } from "react-spring"
-import {First, Cards, Desktop, Projects, Cell, Arcade, Book,Tv, HtmlLoading} from './pages'
-const Room = lazy(() => import('./pages/Room'))
+import {
+  First,
+  Cards,
+  Desktop,
+  Projects,
+  Cell,
+  Arcade,
+  Book,
+  Tv,
+  HtmlLoading,
+} from "./pages";
+const Room = lazy(() => import("./pages/Room"));
 
 function App() {
-  const location = useLocation()
+  const location = useLocation();
   // const transitions = useTransition(location, {
   //   from: { opacity:0.3, filter: 'blur(100px)' ,transform: 'rotate(180deg)'},
   //   enter: { opacity:1,filter: 'blur(0px)', transform: 'rotate(0deg)'},
@@ -14,14 +24,25 @@ function App() {
   //   config: {duration: 750},
   //   exitBeforeEnter: true
   // });
-  console.log('%cThank You for visiting my Portfolio. Please consider hiring me!', 'font-weight: thin; color: #ff0000; font-size:3rem')
+  console.log(
+    "%cThank You for visiting my Portfolio. Please consider hiring me!",
+    "font-weight: thin; color: #ff0000; font-size:3rem",
+  );
   return (
     <NextUIProvider>
       <Routes location={location}>
-        <Route path="/" exact element={<First /> } />
-        <Route path="/room" exact element={<Suspense fallback={<HtmlLoading />}><Room /></Suspense>} />
-        <Route path="/book" exact element={<Book /> } />
-        <Route path="/cards" exact element={<Cards />}/>
+        <Route path="/" exact element={<First />} />
+        <Route
+          path="/room"
+          exact
+          element={
+            <Suspense fallback={<HtmlLoading />}>
+              <Room />
+            </Suspense>
+          }
+        />
+        <Route path="/book" exact element={<Book />} />
+        <Route path="/cards" exact element={<Cards />} />
         <Route path="/arcade" exact element={<Arcade />} />
         <Route path="/desktop" exact element={<Desktop />} />
         <Route path="/projects" exact element={<Projects />} />
@@ -29,10 +50,10 @@ function App() {
         <Route path="tv" exact element={<Tv />} />
       </Routes>
     </NextUIProvider>
-  )
+  );
 }
 
-export default App
+export default App;
 
 /*
 {transitions((props, item) => (
