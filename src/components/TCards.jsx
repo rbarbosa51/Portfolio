@@ -25,7 +25,7 @@ const to = (i) => ({
   rot: -10 + Math.random() * 20,
   delay: i * 100,
 });
-const from = (_i) => ({ x: 0, rot: 0, scale: 1.5, y: -1000 });
+const from = () => ({ x: 0, rot: 0, scale: 1.5, y: -1000 });
 const trans = (r, s) =>
   `perspective(1500px) rotateX(30deg) rotateY(${
     r / 10
@@ -35,7 +35,7 @@ export default function TCards() {
   const [gone] = useState(() => new Set());
   const [props, api] = useSprings(cards.length, (i) => ({
     ...to(i),
-    from: from(i),
+    from: from(),
   }));
   const bind = useDrag(
     ({ args: [index], down, movement: [mx], direction: [xDir], velocity }) => {

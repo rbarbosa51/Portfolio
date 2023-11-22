@@ -1,13 +1,13 @@
 import RoomModels from "./RoomModels";
 import { CameraControls, PerspectiveCamera } from "@react-three/drei";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import { useControls, button } from "leva";
 
 export default function Scene() {
   const cameraControlsRef = useRef();
   const isZoomed = useRef();
   isZoomed.current = false;
-  const cameraControls = useControls("Camera Reset", {
+  useControls("Camera Reset", {
     Reset: button(() => {
       cameraControlsRef.current.setLookAt(
         1.875,
