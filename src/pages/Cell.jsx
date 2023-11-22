@@ -22,21 +22,21 @@ function Cell() {
                 <a
                   className="btn btn-outline btn-info"
                   target="_blank"
-                  href="mailto:rafael.barbosa51@gmail.com"
+                  href="mailto:rafael.barbosa51@gmail.com" rel="noreferrer"
                 >
                   E-mail
                 </a>
                 <a
                   className="btn btn-outline btn-info"
                   target="_blank"
-                  href="https://github.com/rbarbosa51"
+                  href="https://github.com/rbarbosa51" rel="noreferrer"
                 >
                   GitHub
                 </a>
                 <a
                   className="btn btn-outline btn-info"
                   target="_blank"
-                  href="https://www.linkedin.com/in/rafaelbarbosa51/"
+                  href="https://www.linkedin.com/in/rafaelbarbosa51/" rel="noreferrer"
                 >
                   LinkedIn
                 </a>

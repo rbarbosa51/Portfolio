@@ -172,7 +172,7 @@ export default function Tv() {
           id="text8"
           className="neonText absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2  text-center font-sans text-5xl font-thin opacity-0 lg:text-6xl"
         >
-          Do you want someone who will prioritize your team's Objectives and Key
+          Do you want someone who will prioritize your team&apos;s Objectives and Key
           Results Indicators
         </h1>
         <div
