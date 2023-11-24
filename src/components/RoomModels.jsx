@@ -1,10 +1,11 @@
 import { useGLTF, useTexture, Html } from "@react-three/drei";
-import { memo, useState } from "react";
+import { memo, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { DoubleSide } from "three";
 function RoomModels() {
   const navigate = useNavigate();
   const [musicDialog, setMusicDialog] = useState(false);
+  const [hovered, setHovered] = useState(false);
 
   const room = useGLTF("/models/room.glb");
   const arcade = useGLTF("/models/arcade.glb");
@@ -21,6 +22,9 @@ function RoomModels() {
   const cards = useGLTF("/models/cards.glb");
   const cell = useGLTF("/models/cell.glb");
 
+  useEffect(() => {
+    document.body.style.cursor = hovered ? 'pointer' : 'auto'
+  }, [hovered])
   const resumeClick = (e) => {
     e.stopPropagation();
     window.open(
@@ -71,106 +75,105 @@ function RoomModels() {
         <meshStandardMaterial map={texture} />
       </mesh>
       <group>
-        <mesh>
+        <mesh onPointerOver={() => setHovered(true)} onPointerOut={() => setHovered(false)}>
           <primitive object={arcade.scene} onClick={arcadeClick} />
           <meshBasicMaterial />
         </mesh>
         <Html occlude position={[-1, 1.4, 0.75]}>
           <div
-            className="rounded-full bg-gradient-to-b from-sky-50/50 to-sky-500/50 px-2"
+            className="rounded-full bg-gradient-to-b from-sky-50/50 to-sky-500/50 px-2 hover:cursor-pointer"
             onClick={arcadeClick}
           >
             <h1 className="text-sm text-white">Arcade</h1>
           </div>
         </Html>
       </group>
-      <mesh>
+      <mesh onPointerOver={() => setHovered(true)} onPointerOut={() => setHovered(false)}>
         <primitive object={resume.scene} onClick={resumeClick} />
         <meshBasicMaterial />
         <Html occlude position={[-1.4, 1.85, 0.3]}>
           <div
-            className="rounded-full bg-gradient-to-b from-sky-50/50 to-sky-500/50 px-2"
+            className="rounded-full bg-gradient-to-b from-sky-50/50 to-sky-500/50 px-2 hover:cursor-pointer"
             onClick={resumeClick}
           >
             <h1 className="text-sm text-white">Resume</h1>
           </div>
         </Html>
       </mesh>
-      <mesh>
+      <mesh onPointerOver={() => setHovered(true)} onPointerOut={() => setHovered(false)}>
         <primitive object={books.scene} onClick={bookClick} />
         <meshBasicMaterial />
         <Html occlude position={[-1.35, 1.85, -0.65]} onClick={bookClick}>
           <div
-            className="rounded-full bg-gradient-to-b from-sky-50/50 to-sky-500/50 px-2"
+            className="rounded-full bg-gradient-to-b from-sky-50/50 to-sky-500/50 px-2 hover:cursor-pointer"
             onClick={() => console.log("Clicked Test label")}
           >
             <h1 className="text-sm text-white">Books</h1>
           </div>
         </Html>
       </mesh>
-      <mesh>
+      <mesh onPointerOver={() => setHovered(true)} onPointerOut={() => setHovered(false)}>
         <primitive object={computer1.scene} onClick={projectsClick} />
         <meshBasicMaterial />
         <Html occlude position={[-1.35, 1.2, 0.1]}>
           <div
-            className="rounded-full bg-gradient-to-b from-sky-50/50 to-sky-500/50 px-2"
+            className="rounded-full bg-gradient-to-b from-sky-50/50 to-sky-500/50 px-2 hover:cursor-pointer"
             onClick={projectsClick}
           >
             <h1 className="text-sm text-white">Projects</h1>
           </div>
         </Html>
       </mesh>
-      <mesh>
+      <mesh onPointerOver={() => setHovered(true)} onPointerOut={() => setHovered(false)}>
         <primitive object={computer2.scene} onClick={musicClick} />
         <meshBasicMaterial />
         <Html occlude position={[-1.4, 1.2, -1.2]}>
           <div
-            className="rounded-full bg-gradient-to-b from-sky-50/50 to-sky-500/50 px-2"
+            className="rounded-full bg-gradient-to-b from-sky-50/50 to-sky-500/50 px-2 hover:cursor-pointer"
             onClick={musicClick}
           >
             <h1 className="text-sm text-white">Music</h1>
           </div>
         </Html>
       </mesh>
-      <mesh>
+      <mesh onPointerOver={() => setHovered(true)} onPointerOut={() => setHovered(false)}>
         <primitive object={computer3.scene} onClick={desktopClick} />
         <meshBasicMaterial />
         <Html occlude position={[-0.6, 1.2, -1.3]}>
           <div
-            className="rounded-full bg-gradient-to-b from-sky-50/50 to-sky-500/50 px-2"
+            className="rounded-full bg-gradient-to-b from-sky-50/50 to-sky-500/50 px-2 hover:cursor-pointer"
             onClick={desktopClick}
           >
             <h1 className="text-sm text-white">Computer</h1>
           </div>
         </Html>
       </mesh>
-      <mesh>
+      <mesh onPointerOver={() => setHovered(true)} onPointerOut={() => setHovered(false)}>
         <primitive object={tv.scene} onClick={tvClick} />
         <meshBasicMaterial />
         <Html occlude position={[0.45, 0.95, -1.1]}>
           <div
-            className="rounded-full bg-gradient-to-b from-sky-50/50 to-sky-500/50 px-2"
+            className="rounded-full bg-gradient-to-b from-sky-50/50 to-sky-500/50 px-2 hover:cursor-pointer"
             onClick={tvClick}
           >
             <h1 className="text-sm text-white">Tv</h1>
           </div>
         </Html>
       </mesh>
-      <group>
-        <mesh>
-          <primitive object={picture1.scene} onClick={picture1Click} />
-          <meshStandardMaterial map={texturePicture} side={DoubleSide}/>
-          <Html occlude position={[-0.3, 2, -1.3]}>
-            <div
-              className="w-24 rounded-full bg-gradient-to-b from-sky-50/50 to-sky-500/50 px-2"
-              onClick={picture1Click}
-              >
-              <h1 className="text-sm text-white">Rafael</h1>
-            </div>
-          </Html>
-        </mesh>
-      </group>
-      <mesh>
+      <mesh onPointerOver={() => setHovered(true)} onPointerOut={() => setHovered(false)}>
+        <primitive object={picture1.scene} onClick={picture1Click} />
+        <meshStandardMaterial map={texturePicture} side={DoubleSide}/>
+        <Html occlude position={[-0.3, 2, -1.3]}>
+          <div
+            className="w-24 rounded-full bg-gradient-to-b from-sky-50/50 to-sky-500/50 px-2 hover:cursor-pointer"
+            onClick={picture1Click}
+            >
+            <h1 className="text-sm text-white">Rafael</h1>
+          </div>
+        </Html>
+      </mesh>
+      
+      <mesh onPointerOver={() => setHovered(true)} onPointerOut={() => setHovered(false)}>
         <primitive
           object={picture2.scene}
           onClick={() => console.log("Picture 2")}
@@ -178,19 +181,19 @@ function RoomModels() {
         <meshBasicMaterial />
         <Html occlude position={[0.7, 1.2, -1.3]}>
           <div
-            className="w-24 rounded-full bg-gradient-to-b from-sky-50/50 to-sky-500/50 px-2"
+            className="w-24 rounded-full bg-gradient-to-b from-sky-50/50 to-sky-500/50 px-2 hover:cursor-pointer"
             onClick={() => console.log("Clicked Test label")}
           >
             <h1 className="text-sm text-white">Picture 2</h1>
           </div>
         </Html>
       </mesh>
-      <mesh position={[-1.7, 0.25, -0.7]}>
+      <mesh position={[-1.7, 0.25, -0.7]} onPointerOver={() => setHovered(true)} onPointerOut={() => setHovered(false)}>
         <primitive object={cards.scene} onClick={cardsClick} />
         <meshBasicMaterial />
         <Html occlude position={[0.7, 0.45, 0.1]}>
           <div
-            className="rounded-full bg-gradient-to-b from-sky-50/50 to-sky-500/50 px-2"
+            className="rounded-full bg-gradient-to-b from-sky-50/50 to-sky-500/50 px-2 hover:cursor-pointer"
             onClick={cardsClick}
           >
             <h1 className="text-sm text-white">Cards</h1>
@@ -236,12 +239,12 @@ function RoomModels() {
           ></iframe>
         </div>
       </Html>
-      <mesh>
+      <mesh onPointerOver={() => setHovered(true)} onPointerOut={() => setHovered(false)}>
         <primitive object={cell.scene} onClick={cellClick} />
         <meshBasicMaterial />
         <Html occlude position={[0.4, 0.45, 0.3636]}>
           <div
-            className="w-24 rounded-full bg-gradient-to-b from-sky-50/50 to-sky-500/50 px-2"
+            className="w-24 rounded-full bg-gradient-to-b from-sky-50/50 to-sky-500/50 px-2 hover:cursor-pointer"
             onClick={cellClick}
           >
             <h1 className="text-sm text-white">Contact Me</h1>

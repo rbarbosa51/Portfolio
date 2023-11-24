@@ -9,7 +9,6 @@ import { Html } from "@react-three/drei";
 
 const chatText = [
   "Greetings! My Name is: Rafael",
-  "Second Text",
   "Third Text",
   "Yes, this is the greatest text line ever. Success!!!!!",
   "More lines. Text",
