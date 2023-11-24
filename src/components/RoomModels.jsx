@@ -1,7 +1,7 @@
 import { useGLTF, useTexture, Html } from "@react-three/drei";
 import { memo, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { DoubleSide } from "three";
 function RoomModels() {
   const navigate = useNavigate();
   const [musicDialog, setMusicDialog] = useState(false);
@@ -15,7 +15,8 @@ function RoomModels() {
   const computer3 = useGLTF("/models/computer3.glb");
   const tv = useGLTF("/models/tv.glb");
   const texture = useTexture("/models/roomtexture.png");
-  const picture1 = useGLTF("/models/picture1blank.glb");
+  const picture1 = useGLTF("/models/Picture1Tex.glb");
+  const texturePicture = useTexture('/models/Picture1Texture.png');
   const picture2 = useGLTF("/models/picture2blank.glb");
   const cards = useGLTF("/models/cards.glb");
   const cell = useGLTF("/models/cell.glb");
@@ -155,18 +156,20 @@ function RoomModels() {
           </div>
         </Html>
       </mesh>
-      <mesh>
-        <primitive object={picture1.scene} onClick={picture1Click} />
-        <meshBasicMaterial />
-        <Html occlude position={[-0.3, 2, -1.3]}>
-          <div
-            className="w-24 rounded-full bg-gradient-to-b from-sky-50/50 to-sky-500/50 px-2"
-            onClick={picture1Click}
-          >
-            <h1 className="text-sm text-white">Rafael</h1>
-          </div>
-        </Html>
-      </mesh>
+      <group>
+        <mesh>
+          <primitive object={picture1.scene} onClick={picture1Click} />
+          <meshStandardMaterial map={texturePicture} side={DoubleSide}/>
+          <Html occlude position={[-0.3, 2, -1.3]}>
+            <div
+              className="w-24 rounded-full bg-gradient-to-b from-sky-50/50 to-sky-500/50 px-2"
+              onClick={picture1Click}
+              >
+              <h1 className="text-sm text-white">Rafael</h1>
+            </div>
+          </Html>
+        </mesh>
+      </group>
       <mesh>
         <primitive
           object={picture2.scene}

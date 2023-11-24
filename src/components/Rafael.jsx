@@ -32,6 +32,7 @@ export function Rafael(props) {
 
   useEffect(() => {
     const action = chatActions[textPosition];
+    console.log(actions)
     actions[action].reset().fadeIn(0.5).play();
     return () => actions[action].fadeOut(0.5);
   }, [textPosition]);
