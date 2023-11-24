@@ -163,7 +163,7 @@ function RoomModels() {
             className="w-24 rounded-full bg-gradient-to-b from-sky-50/50 to-sky-500/50 px-2"
             onClick={picture1Click}
           >
-            <h1 className="text-sm text-white">Picture</h1>
+            <h1 className="text-sm text-white">Rafael</h1>
           </div>
         </Html>
       </mesh>

@@ -31,7 +31,6 @@ export function Rafael(props) {
   const [textPosition, setTextPosition] = useState(0);
 
   useEffect(() => {
-    //console.log(actions);
     const action = chatActions[textPosition];
     actions[action].reset().fadeIn(0.5).play();
     return () => actions[action].fadeOut(0.5);
