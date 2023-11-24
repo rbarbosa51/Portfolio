@@ -12,6 +12,7 @@ import {
   Book,
   Tv,
   HtmlLoading,
+  Picture1
 } from "./pages";
 const Room = lazy(() => import("./pages/Room"));
 
@@ -47,7 +48,8 @@ function App() {
         <Route path="/desktop" exact element={<Desktop />} />
         <Route path="/projects" exact element={<Projects />} />
         <Route path="/cell" exact element={<Cell />} />
-        <Route path="tv" exact element={<Tv />} />
+        <Route path="/tv" exact element={<Tv />} />
+        <Route path="/picture1" exact element={<Picture1 />} />
       </Routes>
     </NextUIProvider>
   );

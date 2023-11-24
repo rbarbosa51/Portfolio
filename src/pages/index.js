@@ -9,3 +9,4 @@ export { default as Cell } from "./Cell";
 export { default as HtmlLoading } from "./HtmlLoading";
 export { default as First } from "./First";
 export { default as Tv } from "./Tv";
+export {default as Picture1} from './Picture1'

@@ -59,6 +59,10 @@ function RoomModels() {
     e.stopPropagation();
     navigate("/tv");
   };
+  const picture1Click = (e) => {
+    e.stopPropagation();
+    navigate('/picture1')
+  }
   return (
     <>
       <mesh>
@@ -154,13 +158,13 @@ function RoomModels() {
       <mesh>
         <primitive
           object={picture1.scene}
-          onClick={() => console.log("Picture 1")}
+          onClick={picture1Click}
         />
         <meshBasicMaterial />
         <Html occlude position={[-0.3, 2, -1.3]}>
           <div
             className="w-24 rounded-full bg-gradient-to-b from-sky-50/50 to-sky-500/50 px-2"
-            onClick={() => console.log("Clicked Test label")}
+            onClick={picture1Click}
           >
             <h1 className="text-sm text-white">Picture 1</h1>
           </div>
