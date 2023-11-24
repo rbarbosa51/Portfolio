@@ -15,8 +15,8 @@ function RoomModels() {
   const computer3 = useGLTF("/models/computer3.glb");
   const tv = useGLTF("/models/tv.glb");
   const texture = useTexture("/models/roomtexture.png");
-  const picture1 = useGLTF("/models/picture1.glb");
-  const picture2 = useGLTF("/models/picture2.glb");
+  const picture1 = useGLTF("/models/picture1blank.glb");
+  const picture2 = useGLTF("/models/picture2blank.glb");
   const cards = useGLTF("/models/cards.glb");
   const cell = useGLTF("/models/cell.glb");
 
