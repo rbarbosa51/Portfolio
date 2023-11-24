@@ -61,8 +61,8 @@ function RoomModels() {
   };
   const picture1Click = (e) => {
     e.stopPropagation();
-    navigate('/picture1')
-  }
+    navigate("/picture1");
+  };
   return (
     <>
       <mesh>
@@ -156,10 +156,7 @@ function RoomModels() {
         </Html>
       </mesh>
       <mesh>
-        <primitive
-          object={picture1.scene}
-          onClick={picture1Click}
-        />
+        <primitive object={picture1.scene} onClick={picture1Click} />
         <meshBasicMaterial />
         <Html occlude position={[-0.3, 2, -1.3]}>
           <div

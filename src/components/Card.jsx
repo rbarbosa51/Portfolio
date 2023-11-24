@@ -36,7 +36,8 @@ export default function Card({
             <a
               className="text-primary underline"
               href={`${sourceCode}`}
-              target="_blank" rel="noreferrer"
+              target="_blank"
+              rel="noreferrer"
             >
               {sourceCode}
             </a>

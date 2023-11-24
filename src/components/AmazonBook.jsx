@@ -22,7 +22,8 @@ export default function AmazonBook() {
           <div className="flex flex-col gap-24">
             <p className="text-lg font-bold">Geometry Nodes 3.3 by Tutorials</p>
             <p className="text-small text-default-500">
-              A tutorial based approach to learning Blender&apos;s Geometry Nodes.
+              A tutorial based approach to learning Blender&apos;s Geometry
+              Nodes.
             </p>
           </div>
         </CardHeader>

@@ -12,7 +12,7 @@ import {
   Book,
   Tv,
   HtmlLoading,
-  Picture1
+  Picture1,
 } from "./pages";
 const Room = lazy(() => import("./pages/Room"));
 

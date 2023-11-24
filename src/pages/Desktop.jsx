@@ -306,8 +306,8 @@ const Skills = () => (
       </div>
     </div>
     <p className="mt-4 text-center">
-      I am also a fast learner and will learn any new skills to meet your team&apos;s
-      visions and goals.
+      I am also a fast learner and will learn any new skills to meet your
+      team&apos;s visions and goals.
     </p>
   </div>
 );
