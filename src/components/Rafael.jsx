@@ -7,20 +7,36 @@ import { useRef, useEffect, useState } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
 import { Html } from "@react-three/drei";
 
+//Actions
+// Idle,
+// Rallying,
+// Salsa,
+// Salute,
+// Walking,
+// WaveTwo,
+
 const chatText = [
   "Greetings! My Name is: Rafael",
-  "Third Text",
-  "Yes, this is the greatest text line ever. Success!!!!!",
-  "More lines. Text",
-  "Bla Bla Bla",
+  "I was born in Puerto Rico",
+  "Later on I joined the US Army",
+  "There I became a veteran of both Iraq and Afghanistan",
+  "I am a very a very passionate and creative person",
+  "On my free time, I enjoy dancing Salsa",
+  "In all honesty, there are more qualified candidates than me",
+  "But I will outwork them and dedidate myself to your team",
+  "Thank You!"
 ];
+//Idle, Rallying, Salsa, Salute, Walking, WaveTwo
 const chatActions = [
-  "Idle",
-  "Salute",
-  "Salsa",
-  "Rallying",
-  "Walking",
   "WaveTwo",
+  "Idle",
+  "Walking",
+  "Salute",
+  "Idle",
+  "Salsa",
+  "Idle",
+  "Rallying",
+  "Idle"
 ];
 
 export function Rafael(props) {
@@ -28,14 +44,20 @@ export function Rafael(props) {
   const { nodes, materials, animations } = useGLTF("/models/RafaelAll.glb");
   const { actions } = useAnimations(animations, group);
   const [textPosition, setTextPosition] = useState(0);
-
+  const [lastButton, setLastButton] = useState(true)
   useEffect(() => {
     const action = chatActions[textPosition];
     //console.log(actions)
     actions[action].reset().fadeIn(0.5).play();
     return () => actions[action]?.fadeOut(0.5);
   }, [textPosition]);
-
+  const clickBubble = () => {
+    if (textPosition < chatText.length -1) {
+      setTextPosition((prev) => (prev + 1) % chatText.length)
+    } else {
+      setLastButton(false)
+    }
+  }
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">
@@ -56,14 +78,10 @@ export function Rafael(props) {
               <div className="chat-bubble  bg-blue-400 text-white">
                 {chatText[textPosition]}
                 <div className="flex justify-end">
-                  <button
-                    className="btn btn-outline btn-xs mt-2 text-white"
-                    onClick={() =>
-                      setTextPosition((prev) => (prev + 1) % chatText.length)
-                    }
-                  >
+                  {lastButton && <button className="btn btn-outline btn-xs mt-2 text-white" onClick={clickBubble}>
                     Next
                   </button>
+                  }
                 </div>
               </div>
             </div>
@@ -76,10 +94,3 @@ export function Rafael(props) {
 
 useGLTF.preload("/models/RafaelAll.glb");
 
-//Actions
-// Idle,
-// Rallying,
-// Salsa,
-// Salute,
-// Walking,
-// WaveTwo,
