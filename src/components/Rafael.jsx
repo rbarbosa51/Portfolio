@@ -22,8 +22,8 @@ const chatText = [
   "There I became a veteran of both Iraq and Afghanistan",
   "I am a very a very passionate and creative person",
   "On my free time, I enjoy dancing Salsa",
-  "In all honesty, there are more qualified candidates than me",
-  "But I will outwork them and dedidate myself to your team",
+  "I believe that everything should be done with excellence in mind",
+  "That is what I bring to your team",
   "Thank You!"
 ];
 //Idle, Rallying, Salsa, Salute, Walking, WaveTwo
@@ -52,11 +52,12 @@ export function Rafael(props) {
     return () => actions[action]?.fadeOut(0.5);
   }, [textPosition]);
   const clickBubble = () => {
-    if (textPosition < chatText.length -1) {
-      setTextPosition((prev) => (prev + 1) % chatText.length)
-    } else {
+    if (textPosition === chatText.length -2) {
       setLastButton(false)
     }
+    if (textPosition < chatText.length -1) {
+      setTextPosition((prev) => (prev + 1) % chatText.length)
+    } 
   }
   return (
     <group ref={group} {...props} dispose={null}>
