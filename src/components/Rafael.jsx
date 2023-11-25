@@ -18,8 +18,9 @@ import { Html } from "@react-three/drei";
 const chatText = [
   "Greetings! My Name is: Rafael",
   "I was born in Puerto Rico",
-  "Later on I joined the US Army",
+  "Later on in my life I joined the US Army",
   "There I became a veteran of both Iraq and Afghanistan",
+  "I currently live in Texas",
   "I am a very a very passionate and creative person",
   "On my free time, I enjoy dancing Salsa",
   "I believe that everything should be done with excellence in mind",
@@ -32,6 +33,7 @@ const chatActions = [
   "Idle",
   "Walking",
   "Salute",
+  "WaveTwo",
   "Idle",
   "Salsa",
   "Idle",

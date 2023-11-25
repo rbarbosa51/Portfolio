@@ -16,8 +16,8 @@ function RoomModels() {
   const computer3 = useGLTF("/models/computer3.glb");
   const tv = useGLTF("/models/tv.glb");
   const texture = useTexture("/models/roomtexture.png");
-  const picture1 = useGLTF("/models/Picture1Tex.glb");
-  const texturePicture = useTexture('/models/Picture1Texture.png');
+  const picture1 = useGLTF("/models/Picture1aTex.glb");
+  const texturePicture = useTexture('/models/Picture2Texture.png');
   const picture2 = useGLTF("/models/picture2blank.glb");
   const cards = useGLTF("/models/cards.glb");
   const cell = useGLTF("/models/cell.glb");
@@ -165,7 +165,7 @@ function RoomModels() {
         <meshStandardMaterial map={texturePicture} side={DoubleSide}/>
         <Html occlude position={[-0.3, 2, -1.3]}>
           <div
-            className="w-24 rounded-full bg-gradient-to-b from-sky-50/50 to-sky-500/50 px-2 hover:cursor-pointer"
+            className="rounded-full bg-gradient-to-b from-sky-50/50 to-sky-500/50 px-2 hover:cursor-pointer"
             onClick={picture1Click}
             >
             <h1 className="text-sm text-white">Rafael</h1>
@@ -181,10 +181,10 @@ function RoomModels() {
         <meshBasicMaterial />
         <Html occlude position={[0.7, 1.2, -1.3]}>
           <div
-            className="w-24 rounded-full bg-gradient-to-b from-sky-50/50 to-sky-500/50 px-2 hover:cursor-pointer"
+            className="rounded-full bg-gradient-to-b from-sky-50/50 to-sky-500/50 px-2 hover:cursor-pointer"
             onClick={() => console.log("Clicked Test label")}
           >
-            <h1 className="text-sm text-white">Picture 2</h1>
+            <h1 className="text-sm text-white">Picture2</h1>
           </div>
         </Html>
       </mesh>
