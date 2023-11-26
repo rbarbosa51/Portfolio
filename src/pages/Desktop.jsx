@@ -493,8 +493,8 @@ export default function Desktop() {
         width={width}
         height={height}
         url={url}
-        children={children}
-      />,
+        
+      >{children}</Window>,
       ...windows,
     ]);
     setWindowCount((prev) => ++prev);
