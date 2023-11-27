@@ -14,7 +14,7 @@ export function Demon(props) {
   const stateAction = props.demonState;
   useEffect(() => {
     if (stateAction === 'Weapon') {
-      actions[stateAction]?.reset()?.fadeIn(0.5).setEffectiveTimeScale(0.3).play()
+      actions[stateAction]?.reset()?.fadeIn(0.5).setEffectiveTimeScale(0.4).play()
     } else {
       actions[stateAction].clampWhenFinished = true
       actions[stateAction]?.reset()?.fadeIn(0.5).setLoop(THREE.LoopOnce).setEffectiveTimeScale(0.25).play();
@@ -37,7 +37,7 @@ export function Demon(props) {
           position={[1, 3, 0]}
         >
           <div className="chat chat-start w-128">
-            <div className="chat-bubble bg-blue-400/80 text-white">
+            <div className="chat-bubble bg-blue-400/80 text-white/80">
               Password!!!
             </div>
           </div>

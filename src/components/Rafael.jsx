@@ -70,10 +70,10 @@ export function Rafael(props) {
             position={[0.3, 2.3, 0]}
           >
             <div className="chat chat-start">
-              <div className="chat-bubble  bg-blue-400 text-white">
+              <div className="chat-bubble  bg-blue-400 text-white/80">
                 {chatText[textPosition]}
                 <div className="flex justify-end">
-                  {lastButton && <button className="btn btn-outline btn-xs mt-2 text-white" onClick={clickBubble}>
+                  {lastButton && <button className="btn btn-outline btn-xs mt-2 text-white/80 hover:border-white hover:bg-primary/80" onClick={clickBubble}>
                     Next
                   </button>
                   }

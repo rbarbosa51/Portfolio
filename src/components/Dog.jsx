@@ -30,10 +30,10 @@ export function Dog(props) {
       {props.dogChat && <Html
           as="div"
           wrapperClass="bg-transparent"
-          position={[1, 3, 0]}
+          position={[1.3, 2.5, 0]}
         >
           <div className="chat chat-start w-128">
-            <div className="chat-bubble bg-blue-400/80 text-white">
+            <div className="chat-bubble bg-blue-400/80 text-white/80">
               You saved me!!!
             </div>
           </div>
