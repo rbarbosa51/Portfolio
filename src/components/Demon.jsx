@@ -4,7 +4,7 @@ Command: npx gltfjsx@6.2.15 public/Demon.gltf -o src/Demon.jsx
 */
 
 import { useRef, useEffect, useState, useContext } from 'react'
-import { useGLTF, useAnimations } from '@react-three/drei'
+import { useGLTF, useAnimations, Html } from '@react-three/drei'
 import * as THREE from 'three'
 
 export function Demon(props) {
@@ -14,7 +14,7 @@ export function Demon(props) {
   const stateAction = props.demonState;
   useEffect(() => {
     if (stateAction === 'Weapon') {
-      actions[stateAction]?.reset()?.fadeIn(0.5).setEffectiveTimeScale(0.5).play()
+      actions[stateAction]?.reset()?.fadeIn(0.5).setEffectiveTimeScale(0.3).play()
     } else {
       actions[stateAction].clampWhenFinished = true
       actions[stateAction]?.reset()?.fadeIn(0.5).setLoop(THREE.LoopOnce).setEffectiveTimeScale(0.25).play();
@@ -30,6 +30,19 @@ export function Demon(props) {
           <skinnedMesh name="Trident" geometry={nodes.Trident.geometry} material={materials.Atlas} skeleton={nodes.Trident.skeleton} />
         </group>
       </group>
+      {props.showDemonChat && 
+      <Html
+          as="div"
+          wrapperClass="bg-transparent"
+          position={[1, 3, 0]}
+        >
+          <div className="chat chat-start w-128">
+            <div className="chat-bubble bg-blue-400/80 text-white">
+              Password!!!
+            </div>
+          </div>
+        </Html>
+        }
     </group>
   )
 }

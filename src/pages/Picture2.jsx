@@ -7,12 +7,16 @@ import { useState } from "react"
 
 export default function Picture2() {
     const [demonAction, setDemonAction] = useState('Weapon')
+    const [showDemonChat, setShowDemonChat] = useState(true)
     const [dogState, setDogState] = useState('Idle')
+    const [dogChat, setDogChat] = useState(false)
     const [showJail, setShowJail] = useState(true);
     const clickBtn = () => {
       setDemonAction('Death');
       setDogState('Jump');
       setShowJail(false);
+      setShowDemonChat(false);
+      setDogChat(true);
     }
     return (
         <div className="h-screen">
@@ -21,8 +25,8 @@ export default function Picture2() {
             <ambientLight intensity={1.0} />
             <Environment preset="sunset" />
             <Sky distance={450000} sunPosition={[0,1,0]} inclination={0} azimuth={0.25} />
-            <Demon position={[-2,-1,1.5]} rotation={[0,0.436332,0]} demonState={demonAction}/>
-            <Dog position={[0,-1,-1]} dogState={dogState}/>
+            <Demon position={[-2,-1,1.5]} rotation={[0,0.436332,0]} demonState={demonAction} showDemonChat={showDemonChat}/>
+            <Dog position={[0,-1,-1]} dogState={dogState} dogChat={dogChat}/>
             {showJail && 
               <Jail position={[0,-1,-1]}/>
             }
