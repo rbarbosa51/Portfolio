@@ -18,7 +18,8 @@ function RoomModels() {
   const texture = useTexture("/models/roomtexture.png");
   const picture1 = useGLTF("/models/Picture1aTex.glb");
   const texturePicture = useTexture('/models/Picture2Texture.png');
-  const picture2 = useGLTF("/models/picture2blank.glb");
+  const picture2 = useGLTF("/models/Picture2Tex.glb");
+  const texturePicture2 = useTexture('/models/Picture2.png');
   const cards = useGLTF("/models/cards.glb");
   const cell = useGLTF("/models/cell.glb");
 
@@ -182,13 +183,13 @@ function RoomModels() {
           object={picture2.scene}
           onClick={picture2Click}
         />
-        <meshBasicMaterial />
+        <meshBasicMaterial map={texturePicture2} />
         <Html occlude position={[0.7, 1.2, -1.3]}>
           <div
             className="rounded-full bg-gradient-to-b from-sky-50/50 to-sky-500/50 px-2 hover:cursor-pointer"
             onClick={picture2Click}
           >
-            <h1 className="text-sm text-white">Picture2</h1>
+            <h1 className="text-sm text-white">Password</h1>
           </div>
         </Html>
       </mesh>
