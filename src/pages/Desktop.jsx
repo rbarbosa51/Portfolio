@@ -11,6 +11,8 @@ import {
 import { useNavigate } from "react-router-dom";
 import { host } from "../components/Host";
 
+
+
 const Window = ({ id, title, width, height, url, children }) => {
   return (
     <WinBox
@@ -312,7 +314,7 @@ const Skills = () => (
   </div>
 );
 const Trash = () => (
-  <div className="relative left-2 top-4 flex gap-8">
+  <div className="relative left-2 top-4 flex flex-wrap gap-8">
     <div className="flex flex-col items-center justify-center">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -358,10 +360,11 @@ const Trash = () => (
       </svg>
       <div>DoNotClick.html</div>
     </div>
+    
   </div>
 );
 const Share = () => (
-  <div className="relative left-2 top-4 flex gap-8">
+  <div className="relative left-2 top-4 flex flex-wrap gap-8">
     <div
       className="flex flex-col items-center justify-center"
       onClick={() =>
@@ -480,11 +483,19 @@ const Share = () => (
     </div>
   </div>
 );
+const PasswordWindow = () => (
+  <div className="px-2">
+    {/* <h1 className="text-center text-xl font-bold text-blue-600 ">Password</h1> */}
+    <p className="mt-2 text-justify first-letter:ml-2">
+     password123
+    </p>
+  </div>
+);
 export default function Desktop() {
   const [windows, setWindows] = useState([]);
   const [windowCount, setWindowCount] = useState(0);
   const navigate = useNavigate();
-
+  
   const openWinBox = (title, width, height, url, children) => {
     setWindows([
       <Window
@@ -493,7 +504,6 @@ export default function Desktop() {
         width={width}
         height={height}
         url={url}
-        
       >{children}</Window>,
       ...windows,
     ]);
@@ -649,6 +659,38 @@ export default function Desktop() {
         </svg>
         <div className="bg-gradient-to-r from-blue-700 to-red-500 bg-clip-text text-transparent underline">
           Resume
+        </div>
+      </div>
+      {/* Password */}
+      <div
+        className="absolute right-[6.5%] bottom-[35%] flex flex-col items-center justify-center text-xs text-blue-600 md:text-sm"
+        onClick={() => openWinBox("Password", 500, 350, null, <PasswordWindow />)
+        }
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 40 40"
+          className="h-12 w-12"
+        >
+          <path
+            fill="#fff"
+            d="M6.5 37.5L6.5 2.5 24.793 2.5 33.5 11.207 33.5 37.5z"
+          ></path>
+          <path
+            fill="#788b9c"
+            d="M24.586,3L33,11.414V37H7V3H24.586 M25,2H6v36h28V11L25,2L25,2z"
+          ></path>
+          <path
+            fill="#fff"
+            d="M24.5 11.5L24.5 2.5 24.793 2.5 33.5 11.207 33.5 11.5z"
+          ></path>
+          <path
+            fill="#788b9c"
+            d="M25 3.414L32.586 11H25V3.414M25 2h-1v10h10v-1L25 2 25 2zM12 16H28V17H12zM12 19H24V20H12zM12 22H28V23H12zM12 25H24V26H12zM12 28H28V29H12z"
+          ></path>
+        </svg>
+        <div className="bg-gradient-to-r from-blue-700 to-red-500 bg-clip-text text-transparent underline">
+          Password
         </div>
       </div>
       {/* Email */}
@@ -832,8 +874,10 @@ export default function Desktop() {
           Share
         </div>
       </div>
+      
       {/* Windows */}
       {windows}
     </div>
   );
 }
+

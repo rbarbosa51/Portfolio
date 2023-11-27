@@ -74,17 +74,17 @@ export default function Picture2() {
             className="hover:neonText btn btn-outline mx-auto border-none bg-primary hover:bg-primary/80 "
             onClick={enterPassword}
             >Enter Password</button>
-            <p className={`text-red-500 ${wrongPassword ? '' : 'hidden'}`}>Wrong password</p>
+            <p className={`text-red-500 ${wrongPassword ? '' : 'hidden'}`}>Wrong!</p>
             </div>
         }
         </div>
-        {/* <Modal ref={dialogRef}/> */}
+        
         <dialog id="passwordModal" className="modal" ref={dialogRef}>
           <div className="modal-box bg-sky-100 text-slate-600/90">
             <h3 className="font-bold text-lg">Password</h3>
             <p className="py-4">Find the password and enter it here</p>
-            <label htmlFor="password" className="mr-8">Password:</label>
-            <input  onChange={passwordChange} className="rounded-md outline-1 outline px-2" type="text" id="password" name="password"></input>
+            <label htmlFor="enterPassword" className="mr-8">Password:</label>
+            <input  onChange={passwordChange} className="rounded-md outline-1 outline px-2" type="text" id="enterPassword" name="enterPassword"></input>
             <div className="modal-action">
                 {/* <button className="btn">Close</button> */}
               <form method="dialog">
