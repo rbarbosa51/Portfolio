@@ -3,7 +3,7 @@ import {OrbitControls, Environment, Sky} from '@react-three/drei'
 import {Dog} from '../components/Dog'
 import {Demon} from '../components/Demon'
 import { Jail } from "../components/Jail"
-import { useState } from "react"
+import { useState, useRef } from "react"
 import { useNavigate } from "react-router-dom"
 
 export default function Picture2() {
@@ -12,15 +12,39 @@ export default function Picture2() {
     const [dogState, setDogState] = useState('Idle');
     const [dogChat, setDogChat] = useState(false);
     const [showJail, setShowJail] = useState(true);
+    const [showButton, setShowButton] = useState(true);
+    const [wrongPassword, setWrongPassword] = useState(false)
+    const dialogRef = useRef();
+    
+    const [password, setPassword] = useState('');
     const navigate = useNavigate();
+
     const clickBtn = () => {
-      setDemonAction('Death');
-      setDogState('Jump');
-      setShowJail(false);
-      setShowDemonChat(false);
-      setDogChat(true);
+        if (password === 'password123') {
+            setDemonAction('Death');
+            setDogState('Jump');
+            setShowJail(false);
+            setShowDemonChat(false);
+            setDogChat(true);
+            setShowButton(false);
+        } else {
+            setWrongPassword(true)
+            setShowDemonChat('Wrong Password')
+        }
+    }
+    const passwordChange = (e) => {
+        setPassword(e.target.value);
+    }
+    const enterPassword = (e) => {
+        // setDemonAction('Death');
+        // setDogState('Jump');
+        // setShowJail(false);
+        // setShowDemonChat(false);
+        // setDogChat(true);
+        dialogRef.current.showModal()
     }
     return (
+        <>
         <div className="h-screen">
           <Canvas>
             <OrbitControls enableZoom={false} enablePan={false}/>
@@ -36,9 +60,7 @@ export default function Picture2() {
             }
             </group>
           </Canvas>
-          <div className="flex absolute bottom-4">
-            <button className="btn btn-primary" onClick={clickBtn }>Click me</button>
-          </div>
+          
           <div className="absolute top-2 left-1/2 -translate-x-1/2 text-center text-6xl text-green-600">
             <h1 className="neonText text-center text-6xl font-thin text-slate-200/80">Find the Password</h1>
           </div>
@@ -48,6 +70,32 @@ export default function Picture2() {
         >
           Go Back
         </button>
+        {showButton &&
+            <div className="flex gap-4 absolute items-baseline bottom-12 left-1/2 -translate-x-1/2">
+            <button 
+            className="hover:neonText btn btn-outline mx-auto border-none bg-primary hover:bg-primary/80 "
+            onClick={enterPassword}
+            >Enter Password</button>
+            <p className={`text-red-500 ${wrongPassword ? '' : 'hidden'}`}>Wrong password</p>
+            </div>
+        }
         </div>
+        {/* <Modal ref={dialogRef}/> */}
+        <dialog id="passwordModal" className="modal" ref={dialogRef}>
+          <div className="modal-box bg-sky-100 text-slate-600/90">
+            <h3 className="font-bold text-lg">Password</h3>
+            <p className="py-4">Find the password and enter it here</p>
+            <label htmlFor="password" className="mr-8">Password:</label>
+            <input  onChange={passwordChange} className="rounded-md outline-1 outline px-2" type="text" id="password" name="password"></input>
+            <div className="modal-action">
+                {/* <button className="btn">Close</button> */}
+              <form method="dialog">
+                {/* if there is a button in form, it will close the modal */}
+                <button className="hover:neonText btn btn-outline mx-auto border-none bg-primary hover:bg-primary/80" onClick={clickBtn}>Enter</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
+        </>
     )
 }
