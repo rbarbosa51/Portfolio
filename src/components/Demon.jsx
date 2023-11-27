@@ -38,7 +38,7 @@ export function Demon(props) {
         >
           <div className="chat chat-start w-128">
             <div className="chat-bubble bg-blue-400/80 text-white/80">
-              Password!!!
+              {props.demonChatText}
             </div>
           </div>
         </Html>
