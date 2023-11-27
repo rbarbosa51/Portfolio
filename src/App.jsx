@@ -13,6 +13,7 @@ import {
   Tv,
   HtmlLoading,
   Picture1,
+  Picture2,
 } from "./pages";
 const Room = lazy(() => import("./pages/Room"));
 
@@ -50,6 +51,7 @@ function App() {
         <Route path="/cell" exact element={<Cell />} />
         <Route path="/tv" exact element={<Tv />} />
         <Route path="/picture1" exact element={<Suspense fallback={<HtmlLoading />}><Picture1 /></Suspense>} />
+        <Route path="/picture2" exact element={<Suspense fallback={<HtmlLoading />}><Picture2 /></Suspense>} />
       </Routes>
     </NextUIProvider>
   );

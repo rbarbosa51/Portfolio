@@ -1,5 +1,5 @@
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Environment, Sky, Html } from "@react-three/drei";
+import { OrbitControls, Environment, Sky } from "@react-three/drei";
 import { Rafael } from "../components/Rafael";
 import { useNavigate } from "react-router-dom";
 

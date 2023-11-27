@@ -68,6 +68,10 @@ function RoomModels() {
     e.stopPropagation();
     navigate("/picture1");
   };
+  const picture2Click = (e) => {
+    e.stopPropagation();
+    navigate('/picture2');
+  }
   return (
     <>
       <mesh>
@@ -176,13 +180,13 @@ function RoomModels() {
       <mesh onPointerOver={() => setHovered(true)} onPointerOut={() => setHovered(false)}>
         <primitive
           object={picture2.scene}
-          onClick={() => console.log("Picture 2")}
+          onClick={picture2Click}
         />
         <meshBasicMaterial />
         <Html occlude position={[0.7, 1.2, -1.3]}>
           <div
             className="rounded-full bg-gradient-to-b from-sky-50/50 to-sky-500/50 px-2 hover:cursor-pointer"
-            onClick={() => console.log("Clicked Test label")}
+            onClick={picture2Click}
           >
             <h1 className="text-sm text-white">Picture2</h1>
           </div>

@@ -7,19 +7,11 @@ import { useRef, useEffect, useState } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
 import { Html } from "@react-three/drei";
 
-//Actions
-// Idle,
-// Rallying,
-// Salsa,
-// Salute,
-// Walking,
-// WaveTwo,
-
 const chatText = [
   "Greetings! My Name is: Rafael",
   "I was born in Puerto Rico",
   "Later on in my life I joined the US Army",
-  "There I became a veteran of both Iraq and Afghanistan",
+  "There I became a veteran of both Iraq and Afghanistan conflicts",
   "I currently live in Texas",
   "I am a very a very passionate and creative person",
   "On my free time, I enjoy dancing Salsa",
@@ -38,7 +30,7 @@ const chatActions = [
   "Salsa",
   "Idle",
   "Rallying",
-  "Idle"
+  "WaveTwo"
 ];
 
 export function Rafael(props) {
