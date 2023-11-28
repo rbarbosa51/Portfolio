@@ -77,7 +77,7 @@ function RoomModels() {
     <>
       <mesh>
         <primitive object={room.scene} />
-        <meshStandardMaterial map={texture} />
+        <meshBasicMaterial map={texture} />
       </mesh>
       <group>
         <mesh
@@ -191,7 +191,7 @@ function RoomModels() {
         onPointerOut={() => setHovered(false)}
       >
         <primitive object={picture1.scene} onClick={picture1Click} />
-        <meshStandardMaterial map={texturePicture} side={DoubleSide} />
+        <meshBasicMaterial map={texturePicture} side={DoubleSide} />
         <Html occlude position={[-0.3, 2, -1.3]}>
           <div
             className="rounded-full bg-gradient-to-b from-sky-50/50 to-sky-500/50 px-2 hover:cursor-pointer"
