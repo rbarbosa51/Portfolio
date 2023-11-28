@@ -516,18 +516,20 @@ export default function Desktop() {
       {/* Bar */}
       <div className="absolute top-0 flex h-8 w-full items-center justify-between border-1 border-black/10 bg-slate-200/50 p-8">
         <div className="flex gap-2">
-          <Dropdown className="bg-slate-200/50">
+          <Dropdown className="bg-slate-200/50" aria-label="File">
             <DropdownTrigger>
               <Button
+                arialLabel="File"
                 variant=""
                 className="text-md bg-gradient-to-r from-blue-700  to-red-500 bg-clip-text text-transparent hover:bg-slate-100 md:text-xl"
               >
                 File
               </Button>
             </DropdownTrigger>
-            <DropdownMenu className="">
+            <DropdownMenu className="" aria-label="File Items">
               <DropdownItem
                 key="thanks"
+                aria-label="Thanks"
                 onClick={() => openWinBox("Thanks", 500, 350, null, <Thanks />)}
                 className="bg-gradient-to-r from-blue-700 to-red-500 bg-clip-text text-transparent"
               >
@@ -535,6 +537,7 @@ export default function Desktop() {
               </DropdownItem>
               <DropdownItem
                 key="exit"
+                aria-label="Logout"
                 onClick={() => navigate("/room")}
                 className="bg-gradient-to-r from-blue-700 to-red-500 bg-clip-text text-transparent"
               >
@@ -546,14 +549,16 @@ export default function Desktop() {
             <DropdownTrigger>
               <Button
                 variant=""
+                arialLabel="Info"
                 className="text-md bg-gradient-to-r from-blue-700 to-red-500 bg-clip-text text-transparent hover:bg-slate-100 md:text-xl"
               >
                 Info
               </Button>
             </DropdownTrigger>
-            <DropdownMenu>
+            <DropdownMenu aria-label="Info Items">
               <DropdownItem
                 key="about"
+                aria-label="About me"
                 onClick={() =>
                   openWinBox("About Me", 500, 350, null, <AboutMe />)
                 }
@@ -563,6 +568,7 @@ export default function Desktop() {
               </DropdownItem>
               <DropdownItem
                 key="languages"
+                aria-label="Human Languages"
                 onClick={() =>
                   openWinBox(
                     "Human Languages",
@@ -578,6 +584,7 @@ export default function Desktop() {
               </DropdownItem>
               <DropdownItem
                 key="skills"
+                aria-label="Skills"
                 onClick={() => openWinBox("Skills", 700, 400, null, <Skills />)}
                 className="bg-gradient-to-r from-blue-700 to-red-500 bg-clip-text text-transparent"
               >
