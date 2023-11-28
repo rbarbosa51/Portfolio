@@ -9,7 +9,8 @@
     height: 100vh;
   }
   ::-webkit-scrollbar {
-    @apply hidden w-2 md:block;
+    /* @apply hidden w-2 lg:block; */
+    @apply hidden w-2;
     background-color: #06083c;
   }
   ::-webkit-scrollbar-thumb {

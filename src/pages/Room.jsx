@@ -1,6 +1,6 @@
-import { Suspense } from "react";
+// import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { Loading } from "../pages";
+// import { Loading } from "../pages";
 import Scene from "../components/Scene";
 
 export default function Room() {
@@ -8,9 +8,9 @@ export default function Room() {
     <>
       <div className="h-screen bg-slate-200">
         <Canvas shadows>
-          <Suspense fallback={<Loading />}>
+          {/* <Suspense fallback={<Loading />}> */}
             <Scene />
-          </Suspense>
+          {/* </Suspense> */}
         </Canvas>
       </div>
     </>
