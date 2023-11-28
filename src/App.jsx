@@ -14,8 +14,9 @@ import {
   HtmlLoading,
   Picture1,
   Picture2,
+  Room,
 } from "./pages";
-const Room = lazy(() => import("./pages/Room"));
+//const Room = lazy(() => import("./pages/Room"));
 
 function App() {
   const location = useLocation();

@@ -155,7 +155,7 @@ export default function Tv() {
           id="text6"
           className="neonText absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2  text-center font-sans text-5xl font-thin opacity-0 lg:text-6xl"
         >
-          Fear Not
+          Fear Not!
         </h1>
         <div
           id="divider3"
@@ -165,8 +165,7 @@ export default function Tv() {
           id="text7"
           className="neonText absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2  text-center font-sans text-5xl font-thin opacity-0 lg:text-6xl"
         >
-          Do you want a candidate who will prioritize the team over the
-          individual
+          Do you want a candidate who will place more significance to the team rather than the individual
         </h1>
         <h1
           id="text8"
