@@ -17,15 +17,15 @@ function RoomModels() {
   const tv = useGLTF("/models/tv.glb");
   const texture = useTexture("/models/roomtexture.png");
   const picture1 = useGLTF("/models/Picture1aTex.glb");
-  const texturePicture = useTexture('/models/Picture2Texture.png');
+  const texturePicture = useTexture("/models/Picture2Texture.png");
   const picture2 = useGLTF("/models/Picture2Tex.glb");
-  const texturePicture2 = useTexture('/models/Picture2.png');
+  const texturePicture2 = useTexture("/models/Picture2.png");
   const cards = useGLTF("/models/cards.glb");
   const cell = useGLTF("/models/cell.glb");
 
   useEffect(() => {
-    document.body.style.cursor = hovered ? 'pointer' : 'auto'
-  }, [hovered])
+    document.body.style.cursor = hovered ? "pointer" : "auto";
+  }, [hovered]);
   const resumeClick = (e) => {
     e.stopPropagation();
     window.open(
@@ -71,8 +71,8 @@ function RoomModels() {
   };
   const picture2Click = (e) => {
     e.stopPropagation();
-    navigate('/picture2');
-  }
+    navigate("/picture2");
+  };
   return (
     <>
       <mesh>
@@ -80,7 +80,10 @@ function RoomModels() {
         <meshStandardMaterial map={texture} />
       </mesh>
       <group>
-        <mesh onPointerOver={() => setHovered(true)} onPointerOut={() => setHovered(false)}>
+        <mesh
+          onPointerOver={() => setHovered(true)}
+          onPointerOut={() => setHovered(false)}
+        >
           <primitive object={arcade.scene} onClick={arcadeClick} />
           <meshBasicMaterial />
         </mesh>
@@ -93,7 +96,10 @@ function RoomModels() {
           </div>
         </Html>
       </group>
-      <mesh onPointerOver={() => setHovered(true)} onPointerOut={() => setHovered(false)}>
+      <mesh
+        onPointerOver={() => setHovered(true)}
+        onPointerOut={() => setHovered(false)}
+      >
         <primitive object={resume.scene} onClick={resumeClick} />
         <meshBasicMaterial />
         <Html occlude position={[-1.4, 1.85, 0.3]}>
@@ -105,7 +111,10 @@ function RoomModels() {
           </div>
         </Html>
       </mesh>
-      <mesh onPointerOver={() => setHovered(true)} onPointerOut={() => setHovered(false)}>
+      <mesh
+        onPointerOver={() => setHovered(true)}
+        onPointerOut={() => setHovered(false)}
+      >
         <primitive object={books.scene} onClick={bookClick} />
         <meshBasicMaterial />
         <Html occlude position={[-1.35, 1.85, -0.65]} onClick={bookClick}>
@@ -117,7 +126,10 @@ function RoomModels() {
           </div>
         </Html>
       </mesh>
-      <mesh onPointerOver={() => setHovered(true)} onPointerOut={() => setHovered(false)}>
+      <mesh
+        onPointerOver={() => setHovered(true)}
+        onPointerOut={() => setHovered(false)}
+      >
         <primitive object={computer1.scene} onClick={projectsClick} />
         <meshBasicMaterial />
         <Html occlude position={[-1.35, 1.2, 0.1]}>
@@ -129,7 +141,10 @@ function RoomModels() {
           </div>
         </Html>
       </mesh>
-      <mesh onPointerOver={() => setHovered(true)} onPointerOut={() => setHovered(false)}>
+      <mesh
+        onPointerOver={() => setHovered(true)}
+        onPointerOut={() => setHovered(false)}
+      >
         <primitive object={computer2.scene} onClick={musicClick} />
         <meshBasicMaterial />
         <Html occlude position={[-1.4, 1.2, -1.2]}>
@@ -141,7 +156,10 @@ function RoomModels() {
           </div>
         </Html>
       </mesh>
-      <mesh onPointerOver={() => setHovered(true)} onPointerOut={() => setHovered(false)}>
+      <mesh
+        onPointerOver={() => setHovered(true)}
+        onPointerOut={() => setHovered(false)}
+      >
         <primitive object={computer3.scene} onClick={desktopClick} />
         <meshBasicMaterial />
         <Html occlude position={[-0.6, 1.2, -1.3]}>
@@ -153,7 +171,10 @@ function RoomModels() {
           </div>
         </Html>
       </mesh>
-      <mesh onPointerOver={() => setHovered(true)} onPointerOut={() => setHovered(false)}>
+      <mesh
+        onPointerOver={() => setHovered(true)}
+        onPointerOut={() => setHovered(false)}
+      >
         <primitive object={tv.scene} onClick={tvClick} />
         <meshBasicMaterial />
         <Html occlude position={[0.45, 0.95, -1.1]}>
@@ -165,24 +186,27 @@ function RoomModels() {
           </div>
         </Html>
       </mesh>
-      <mesh onPointerOver={() => setHovered(true)} onPointerOut={() => setHovered(false)}>
+      <mesh
+        onPointerOver={() => setHovered(true)}
+        onPointerOut={() => setHovered(false)}
+      >
         <primitive object={picture1.scene} onClick={picture1Click} />
-        <meshStandardMaterial map={texturePicture} side={DoubleSide}/>
+        <meshStandardMaterial map={texturePicture} side={DoubleSide} />
         <Html occlude position={[-0.3, 2, -1.3]}>
           <div
             className="rounded-full bg-gradient-to-b from-sky-50/50 to-sky-500/50 px-2 hover:cursor-pointer"
             onClick={picture1Click}
-            >
+          >
             <h1 className="text-sm text-white">Rafael</h1>
           </div>
         </Html>
       </mesh>
-      
-      <mesh onPointerOver={() => setHovered(true)} onPointerOut={() => setHovered(false)}>
-        <primitive
-          object={picture2.scene}
-          onClick={picture2Click}
-        />
+
+      <mesh
+        onPointerOver={() => setHovered(true)}
+        onPointerOut={() => setHovered(false)}
+      >
+        <primitive object={picture2.scene} onClick={picture2Click} />
         <meshBasicMaterial map={texturePicture2} />
         <Html occlude position={[0.7, 1.2, -1.3]}>
           <div
@@ -193,7 +217,11 @@ function RoomModels() {
           </div>
         </Html>
       </mesh>
-      <mesh position={[-1.7, 0.25, -0.7]} onPointerOver={() => setHovered(true)} onPointerOut={() => setHovered(false)}>
+      <mesh
+        position={[-1.7, 0.25, -0.7]}
+        onPointerOver={() => setHovered(true)}
+        onPointerOut={() => setHovered(false)}
+      >
         <primitive object={cards.scene} onClick={cardsClick} />
         <meshBasicMaterial />
         <Html occlude position={[0.7, 0.45, 0.1]}>
@@ -244,7 +272,10 @@ function RoomModels() {
           ></iframe>
         </div>
       </Html>
-      <mesh onPointerOver={() => setHovered(true)} onPointerOut={() => setHovered(false)}>
+      <mesh
+        onPointerOver={() => setHovered(true)}
+        onPointerOut={() => setHovered(false)}
+      >
         <primitive object={cell.scene} onClick={cellClick} />
         <meshBasicMaterial />
         <Html occlude position={[0.4, 0.45, 0.3636]}>

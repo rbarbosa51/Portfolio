@@ -50,8 +50,24 @@ function App() {
         <Route path="/projects" exact element={<Projects />} />
         <Route path="/cell" exact element={<Cell />} />
         <Route path="/tv" exact element={<Tv />} />
-        <Route path="/picture1" exact element={<Suspense fallback={<HtmlLoading />}><Picture1 /></Suspense>} />
-        <Route path="/picture2" exact element={<Suspense fallback={<HtmlLoading />}><Picture2 /></Suspense>} />
+        <Route
+          path="/picture1"
+          exact
+          element={
+            <Suspense fallback={<HtmlLoading />}>
+              <Picture1 />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/picture2"
+          exact
+          element={
+            <Suspense fallback={<HtmlLoading />}>
+              <Picture2 />
+            </Suspense>
+          }
+        />
       </Routes>
     </NextUIProvider>
   );

@@ -11,8 +11,6 @@ import {
 import { useNavigate } from "react-router-dom";
 import { host } from "../components/Host";
 
-
-
 const Window = ({ id, title, width, height, url, children }) => {
   return (
     <WinBox
@@ -360,7 +358,6 @@ const Trash = () => (
       </svg>
       <div>DoNotClick.html</div>
     </div>
-    
   </div>
 );
 const Share = () => (
@@ -486,16 +483,14 @@ const Share = () => (
 const PasswordWindow = () => (
   <div className="px-2">
     {/* <h1 className="text-center text-xl font-bold text-blue-600 ">Password</h1> */}
-    <p className="mt-2 text-justify first-letter:ml-2">
-     password123
-    </p>
+    <p className="mt-2 text-justify first-letter:ml-2">password123</p>
   </div>
 );
 export default function Desktop() {
   const [windows, setWindows] = useState([]);
   const [windowCount, setWindowCount] = useState(0);
   const navigate = useNavigate();
-  
+
   const openWinBox = (title, width, height, url, children) => {
     setWindows([
       <Window
@@ -504,7 +499,9 @@ export default function Desktop() {
         width={width}
         height={height}
         url={url}
-      >{children}</Window>,
+      >
+        {children}
+      </Window>,
       ...windows,
     ]);
     setWindowCount((prev) => ++prev);
@@ -663,8 +660,9 @@ export default function Desktop() {
       </div>
       {/* Password */}
       <div
-        className="absolute right-[6.5%] bottom-[35%] flex flex-col items-center justify-center text-xs text-blue-600 md:text-sm"
-        onClick={() => openWinBox("Password", 500, 350, null, <PasswordWindow />)
+        className="absolute bottom-[35%] right-[6.5%] flex flex-col items-center justify-center text-xs text-blue-600 md:text-sm"
+        onClick={() =>
+          openWinBox("Password", 500, 350, null, <PasswordWindow />)
         }
       >
         <svg
@@ -874,10 +872,9 @@ export default function Desktop() {
           Share
         </div>
       </div>
-      
+
       {/* Windows */}
       {windows}
     </div>
   );
 }
-

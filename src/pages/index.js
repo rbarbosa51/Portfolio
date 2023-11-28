@@ -10,4 +10,4 @@ export { default as HtmlLoading } from "./HtmlLoading";
 export { default as First } from "./First";
 export { default as Tv } from "./Tv";
 export { default as Picture1 } from "./Picture1";
-export { default as Picture2} from './Picture2'
+export { default as Picture2 } from "./Picture2";

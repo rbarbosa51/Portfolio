@@ -8,16 +8,16 @@ import { useGLTF, useAnimations } from "@react-three/drei";
 import { Html } from "@react-three/drei";
 
 const chatText = [
-  "Greetings! My Name is: Rafael",
+  "Greetings! My Name is: Rafael Barbosa",
   "I was born in Puerto Rico",
   "Later on in my life I joined the US Army",
   "There I became a veteran of both Iraq and Afghanistan conflicts",
-  "I currently live in Texas",
+  "I currently live in Austin, Texas",
   "I am a very a very passionate and creative person",
   "On my free time, I enjoy dancing Salsa",
   "I believe that everything should be done with excellence in mind",
   "That is what I bring to your team",
-  "Thank You!"
+  "Thank You!",
 ];
 //Idle, Rallying, Salsa, Salute, Walking, WaveTwo
 const chatActions = [
@@ -30,7 +30,7 @@ const chatActions = [
   "Salsa",
   "Idle",
   "Rallying",
-  "WaveTwo"
+  "WaveTwo",
 ];
 
 export function Rafael(props) {
@@ -38,7 +38,7 @@ export function Rafael(props) {
   const { nodes, materials, animations } = useGLTF("/models/RafaelAll.glb");
   const { actions } = useAnimations(animations, group);
   const [textPosition, setTextPosition] = useState(0);
-  const [lastButton, setLastButton] = useState(true)
+  const [lastButton, setLastButton] = useState(true);
   useEffect(() => {
     const action = chatActions[textPosition];
     //console.log(actions)
@@ -46,13 +46,13 @@ export function Rafael(props) {
     return () => actions[action]?.fadeOut(0.5);
   }, [textPosition]);
   const clickBubble = () => {
-    if (textPosition === chatText.length -2) {
-      setLastButton(false)
+    if (textPosition === chatText.length - 2) {
+      setLastButton(false);
     }
-    if (textPosition < chatText.length -1) {
-      setTextPosition((prev) => (prev + 1) % chatText.length)
-    } 
-  }
+    if (textPosition < chatText.length - 1) {
+      setTextPosition((prev) => (prev + 1) % chatText.length);
+    }
+  };
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">
@@ -73,10 +73,14 @@ export function Rafael(props) {
               <div className="chat-bubble  bg-blue-400 text-white/80">
                 {chatText[textPosition]}
                 <div className="flex justify-end">
-                  {lastButton && <button className="btn btn-outline btn-xs mt-2 text-white/80 hover:border-white hover:bg-primary/80" onClick={clickBubble}>
-                    Next
-                  </button>
-                  }
+                  {lastButton && (
+                    <button
+                      className="btn btn-outline btn-xs mt-2 text-white/80 hover:border-white hover:bg-primary/80"
+                      onClick={clickBubble}
+                    >
+                      Next
+                    </button>
+                  )}
                 </div>
               </div>
             </div>
@@ -88,4 +92,3 @@ export function Rafael(props) {
 }
 
 useGLTF.preload("/models/RafaelAll.glb");
-
