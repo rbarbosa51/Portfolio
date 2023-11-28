@@ -5,7 +5,7 @@ function Cell() {
   const navigate = useNavigate();
 
   return (
-    <div className="h-screen bg-gradient-to-br from-blue-400 to-pink-400">
+    <div className="min-h-screen bg-gradient-to-br from-blue-400 to-pink-400">
       <button
         className="neonText absolute left-4 top-4 rounded-xl bg-primary px-6 py-2.5 text-sm text-white hover:bg-primary/80"
         onClick={() => navigate("/room")}

@@ -9,7 +9,7 @@ export default function Room() {
       <div className="h-screen bg-slate-200">
         <Canvas shadows>
           {/* <Suspense fallback={<Loading />}> */}
-            <Scene />
+          <Scene />
           {/* </Suspense> */}
         </Canvas>
       </div>

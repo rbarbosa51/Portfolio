@@ -1,5 +1,6 @@
 const cacheversion = "RbarPortv1";
 const filesToCache = [
+  "favicon.ico",
   "models/room.glb",
   "models/roomtexture.png",
   "models/arcade.glb",

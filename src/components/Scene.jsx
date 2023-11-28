@@ -5,26 +5,18 @@ import { useControls, button } from "leva";
 import { useThree } from "@react-three/fiber";
 
 export default function Scene() {
-  const {camera} = useThree();
+  const { camera } = useThree();
   const cameraControlsRef = useRef();
   const isZoomed = useRef();
   isZoomed.current = false;
   const resetCamera = () => {
-    cameraControlsRef.current.setLookAt(
-      1.875,
-      2.1403,
-      1.8246,
-      -2,
-      0,
-      -2,
-      true,
-    );
+    cameraControlsRef.current.setLookAt(1.875, 2.1403, 1.8246, -2, 0, -2, true);
     cameraControlsRef.current.rotate(0, 0, true);
     if (!isZoomed.current) {
       cameraControlsRef.current.zoom(-0.25, true);
       isZoomed.current = true;
     }
-  }
+  };
   useControls("Camera Reset", {
     Reset: button(() => {
       resetCamera();
@@ -32,17 +24,15 @@ export default function Scene() {
   });
 
   useEffect(() => {
-    
     // cameraControlsRef.current.setLookAt(3, 1.3403, 3, -2, 1.5, -2, true)
     // cameraControlsRef.current.setLookAt(3, 2, 3, -2, 1.5, -2, true);
     //cameraControlsRef.current.rotate(0,0,true);
     //cameraControlsRef.current.setLookAt(1.875,2.1403,1.8246,-2,0,-2, true)
     //camera.lookAt(-2,0,-2)
     // cameraControlsRef.current.zoom(-0.25, true);
-    resetCamera()
-    
+    resetCamera();
   }, []);
-  
+
   return (
     <>
       <color attach={"background"} args={["#000000"]} />
@@ -50,7 +40,7 @@ export default function Scene() {
         makeDefault
         fov={30}
         position={[1.875, 2.1403, 1.8246]}
-        rotation={[0,0,0]}
+        rotation={[0, 0, 0]}
       />
       <CameraControls
         ref={cameraControlsRef}
@@ -60,7 +50,6 @@ export default function Scene() {
         // maxAzimuthAngle={Math.PI / 2}
         // azimuthAngle={Math.PI}
         // polarAngle={-Math.PI / 2}
-        
       />
 
       <ambientLight intensity={3.0} />
