@@ -192,7 +192,7 @@ function RoomModels() {
       >
         <primitive object={picture1.scene} onClick={picture1Click} />
         <meshBasicMaterial map={texturePicture} side={DoubleSide} />
-        <Html occlude position={[-0.3, 2, -1.3]}>
+        <Html occlude position={[-0.3, 1.8, -1.3]}>
           <div
             className="rounded-full bg-gradient-to-b from-sky-50/50 to-sky-500/50 px-2 hover:cursor-pointer"
             onClick={picture1Click}
@@ -278,7 +278,7 @@ function RoomModels() {
       >
         <primitive object={cell.scene} onClick={cellClick} />
         <meshBasicMaterial />
-        <Html occlude position={[0.4, 0.45, 0.3636]}>
+        <Html occlude position={[0.4, 0.55, 0.3636]}>
           <div
             className="w-24 rounded-full bg-gradient-to-b from-sky-50/50 to-sky-500/50 px-2 hover:cursor-pointer"
             onClick={cellClick}
