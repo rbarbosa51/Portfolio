@@ -19,13 +19,12 @@ import {
 
 function App() {
   const location = useLocation();
-  
+
   console.log(
     "%cThank You for visiting my Portfolio. Please consider hiring me!",
     "font-weight: thin; color: #ff0000; font-size:3rem",
   );
   return (
-   
     <NextUIProvider>
       <Routes location={location}>
         <Route path="/" exact element={<First />} />
@@ -40,7 +39,15 @@ function App() {
         />
         <Route path="/book" exact element={<Book />} />
         <Route path="/cards" exact element={<Cards />} />
-        <Route path="/arcade" exact element={<Arcade />} />
+        <Route
+          path="/arcade"
+          exact
+          element={
+            <Suspense fallback={<HtmlLoading />}>
+              <Arcade />
+            </Suspense>
+          }
+        />
         <Route path="/desktop" exact element={<Desktop />} />
         <Route path="/projects" exact element={<Projects />} />
         <Route path="/cell" exact element={<Cell />} />
@@ -69,4 +76,3 @@ function App() {
 }
 
 export default App;
-
