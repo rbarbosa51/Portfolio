@@ -8,7 +8,7 @@ export default function Cards() {
     <div className="min-w-screen relative h-screen">
       <TCards />
       <Button
-        className="neonText absolute left-4 top-4"
+        className="neonText absolute left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-4 bottom-4 lg:top-4"
         color="primary"
         onClick={() => navigate("/room")}
       >
