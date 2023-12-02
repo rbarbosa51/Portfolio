@@ -5,6 +5,7 @@ import { Demon } from "../components/Demon";
 import { Jail } from "../components/Jail";
 import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { Button } from "@nextui-org/react";
 
 export default function Picture2() {
   const [demonAction, setDemonAction] = useState("Weapon");
@@ -47,7 +48,7 @@ export default function Picture2() {
     <>
       <div className="h-screen">
         <Canvas>
-          <OrbitControls enableZoom={false} enablePan={false} />
+          <OrbitControls  enablePan={false} />
           <ambientLight intensity={1.0} />
           <Environment preset="sunset" />
           <Sky
@@ -78,14 +79,22 @@ export default function Picture2() {
             {title}
           </h1>
         </div>
-        <button
-          className="neonText absolute left-4 top-4 rounded-xl bg-primary px-6 py-2.5 text-sm text-white hover:bg-primary/80"
+        {/* <button
+          className="neonText absolute left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-4 bottom-4 lg:top-4 bg-primary"
+          //className="neonText absolute left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-4 bottom-4 lg:top-4 rounded-xl bg-primary px-6 py-2.5 text-sm text-white hover:bg-primary/80"
           onClick={() => navigate("/room")}
         >
           Go Back
-        </button>
+        </button> */}
+        <Button
+        className="neonText absolute left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-4 bottom-2 lg:top-4"
+        color="primary"
+        onClick={() => navigate("/room")}
+      >
+        Back
+      </Button>
         {showButton && (
-          <div className="absolute bottom-12 left-1/2 flex -translate-x-1/2 items-baseline gap-4">
+          <div className="absolute bottom-16 lg:bottom-12 left-1/2 flex -translate-x-1/2 items-baseline gap-4">
             <button
               className="hover:neonText btn btn-outline mx-auto border-none bg-primary hover:bg-primary/80 "
               onClick={enterPassword}
