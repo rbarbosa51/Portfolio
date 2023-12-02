@@ -607,7 +607,7 @@ export default function Desktop() {
       {/* Icons */}
       {/* Wikipedia */}
       <div
-        className="absolute left-[35%] top-[20%] flex flex-col items-center justify-center text-xs text-blue-600 md:text-sm"
+        className="absolute left-[25%] lg:left-[35%] top-[20%] flex flex-col items-center justify-center text-xs text-blue-600 md:text-sm"
         onClick={() =>
           openWinBox("Wikipedia", 500, 300, "https://www.wikipedia.com", null)
         }
@@ -631,7 +631,7 @@ export default function Desktop() {
 
       {/* Resume */}
       <div
-        className="absolute left-[3%] top-[55%] flex flex-col items-center justify-center text-xs text-blue-600 md:text-sm"
+        className="absolute left-[5%] top-[55%] flex flex-col items-center justify-center text-xs text-blue-600 md:text-sm"
         onClick={() =>
           window.open(
             "https://drive.google.com/file/d/1TpmA0hnA6PjHiS66V1CX972sd64GfHQq/view?usp=sharing",
@@ -802,7 +802,7 @@ export default function Desktop() {
       </div>
       {/* GitHub */}
       <div
-        className="absolute left-[20.5%] top-[35%] flex flex-col items-center justify-center text-xs text-blue-600 md:text-sm"
+        className="absolute left-[30%] lg:left-[20.5%] top-[35%] flex flex-col items-center justify-center text-xs text-blue-600 md:text-sm"
         onClick={() => window.open("https://github.com/rbarbosa51", "_blank")}
       >
         <img
@@ -816,7 +816,7 @@ export default function Desktop() {
       </div>
       {/* Linked In */}
       <div
-        className="absolute left-[19.5%] top-[55%] flex flex-col items-center justify-center text-xs text-blue-600 md:text-sm"
+        className="absolute left-[25%] lg:left-[19.5%] top-[55%] flex flex-col items-center justify-center text-xs text-blue-600 md:text-sm"
         onClick={() =>
           window.open("https://www.linkedin.com/in/rafaelbarbosa51/", "_blank")
         }
@@ -833,7 +833,7 @@ export default function Desktop() {
       </div>
       {/* Terminal */}
       <div
-        className="absolute bottom-[20%] right-[23.5%] flex flex-col items-center justify-center text-xs text-blue-600 md:text-sm"
+        className="absolute bottom-[20%] right-[30%] lg:right-[23.5%] flex flex-col items-center justify-center text-xs text-blue-600 md:text-sm"
         onClick={() => openWinBox("Terminal", 500, 170, null, <Terminal />)}
       >
         <svg
