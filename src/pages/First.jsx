@@ -43,6 +43,9 @@ export default function First() {
       >
         Enter
       </Button>
+      <div className="absolute bottom-4 portrait:block hidden neonText text-2xl font-thin text-slate-200/80 mx-8 lg:mx-0">
+        For a better experience, please view in fullscreen landscape mode.
+      </div>
     </div>
   );
 }
