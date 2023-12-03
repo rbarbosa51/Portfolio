@@ -75,7 +75,7 @@ export default function Picture2() {
         </Canvas>
 
         <div className="absolute left-1/2 top-2 -translate-x-1/2 text-center text-6xl text-green-600">
-          <h1 className="neonText text-center text-6xl font-thin text-slate-200/80">
+          <h1 className="neonText text-center text-4xl lg:text-6xl font-thin text-slate-200/80">
             {title}
           </h1>
         </div>

@@ -19,7 +19,6 @@ import {
 
 function App() {
   const location = useLocation();
-
   console.log(
     "%cThank You for visiting my Portfolio. Please consider hiring me!",
     "font-weight: thin; color: #ff0000; font-size:3rem",

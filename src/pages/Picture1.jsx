@@ -18,7 +18,7 @@ export default function Picture1() {
           inclination={0}
           azimuth={0.25}
         />
-        <Rafael position={[0, -1, 3.2]} />
+        <Rafael position={[-1, -1, 3.2]} />
       </Canvas>
       {/* <button
         className="neonText absolute left-4 top-4 rounded-xl bg-primary px-6 py-2.5 text-sm text-white hover:bg-primary/80"
