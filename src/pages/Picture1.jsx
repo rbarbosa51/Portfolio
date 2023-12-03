@@ -27,7 +27,7 @@ export default function Picture1() {
         Go Back
       </button> */}
       <Button
-        className="neonText absolute left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-4 bottom-4 lg:top-4"
+        className="neonText absolute bottom-4 left-1/2 -translate-x-1/2 lg:left-4 lg:top-4 lg:translate-x-0"
         color="primary"
         onClick={() => navigate("/room")}
       >

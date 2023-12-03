@@ -14,7 +14,8 @@ function Book() {
         Back
       </button> */}
       <Button
-        className="neonText absolute left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-4 bottom-2 lg:top-4"
+        //className="neonText absolute left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-4 bottom-2 lg:top-4"
+        className="neonText absolute left-4 top-4 z-50 rounded-xl bg-primary px-6 py-2.5 text-sm text-white hover:bg-primary/80"
         color="primary"
         onClick={() => navigate("/room")}
       >

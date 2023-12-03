@@ -48,7 +48,7 @@ export default function Picture2() {
     <>
       <div className="h-screen">
         <Canvas>
-          <OrbitControls  enablePan={false} />
+          <OrbitControls enablePan={false} />
           <ambientLight intensity={1.0} />
           <Environment preset="sunset" />
           <Sky
@@ -75,7 +75,7 @@ export default function Picture2() {
         </Canvas>
 
         <div className="absolute left-1/2 top-2 -translate-x-1/2 text-center text-6xl text-green-600">
-          <h1 className="neonText text-center text-4xl lg:text-6xl font-thin text-slate-200/80">
+          <h1 className="neonText text-center text-4xl font-thin text-slate-200/80 lg:text-6xl">
             {title}
           </h1>
         </div>
@@ -87,14 +87,14 @@ export default function Picture2() {
           Go Back
         </button> */}
         <Button
-        className="neonText absolute left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-4 bottom-2 lg:top-4"
-        color="primary"
-        onClick={() => navigate("/room")}
-      >
-        Back
-      </Button>
+          className="neonText absolute bottom-2 left-1/2 -translate-x-1/2 lg:left-4 lg:top-4 lg:translate-x-0"
+          color="primary"
+          onClick={() => navigate("/room")}
+        >
+          Back
+        </Button>
         {showButton && (
-          <div className="absolute bottom-16 lg:bottom-12 left-1/2 flex -translate-x-1/2 items-baseline gap-4">
+          <div className="absolute bottom-16 left-1/2 flex -translate-x-1/2 items-baseline gap-4 lg:bottom-12">
             <button
               className="hover:neonText btn btn-outline mx-auto border-none bg-primary hover:bg-primary/80 "
               onClick={enterPassword}

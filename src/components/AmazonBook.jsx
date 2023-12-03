@@ -11,7 +11,7 @@ export default function AmazonBook() {
   return (
     <div className="relative">
       {/* //max-w-[400px] */}
-      <Card className="top-4 w-[80%] lg:max-w-[400px] mx-auto rounded-2xl bg-white/50 shadow-xl drop-shadow-2xl backdrop-blur-lg">
+      <Card className="top-4 mx-auto w-[60%] rounded-2xl bg-white/50 shadow-xl drop-shadow-2xl backdrop-blur-lg lg:max-w-[400px] portrait:w-[80%]">
         <CardHeader className="flex gap-3">
           <Image
             alt="nextui logo"
