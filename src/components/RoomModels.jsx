@@ -29,7 +29,7 @@ function RoomModels() {
   const resumeClick = (e) => {
     e.stopPropagation();
     window.open(
-      "https://drive.google.com/file/d/1TpmA0hnA6PjHiS66V1CX972sd64GfHQq/view?usp=sharing",
+      "https://drive.google.com/file/d/19Spm7JkAt2ReJDG3wJdiKIavdNU1xM6N/view?usp=sharing",
       "_blank",
     );
   };
