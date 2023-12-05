@@ -634,7 +634,7 @@ export default function Desktop() {
         className="absolute left-[5%] top-[55%] flex flex-col items-center justify-center text-xs text-blue-600 md:text-sm"
         onClick={() =>
           window.open(
-            "https://drive.google.com/file/d/1TpmA0hnA6PjHiS66V1CX972sd64GfHQq/view?usp=sharing",
+            "https://drive.google.com/file/d/19Spm7JkAt2ReJDG3wJdiKIavdNU1xM6N/view?usp=sharing",
             "_blank",
           )
         }

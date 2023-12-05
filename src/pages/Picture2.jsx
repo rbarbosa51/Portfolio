@@ -39,7 +39,7 @@ export default function Picture2() {
     }
   };
   const passwordChange = (e) => {
-    setPassword(e.target.value);
+    setPassword(e.target.value.toLowerCase().trim());
   };
   const enterPassword = (e) => {
     dialogRef.current.showModal();
