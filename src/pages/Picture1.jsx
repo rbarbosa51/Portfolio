@@ -20,7 +20,7 @@ export default function Picture1() {
         />
         <Rafael position={[-1, -1, 3.2]} />
       </Canvas>
-      
+
       {/* <Button
         className="neonText absolute bottom-4 left-1/2 -translate-x-1/2 lg:left-4 lg:top-4 lg:translate-x-0"
         color="primary"
