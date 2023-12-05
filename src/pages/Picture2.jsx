@@ -79,15 +79,17 @@ export default function Picture2() {
             {title}
           </h1>
         </div>
-        {/* <button
-          className="neonText absolute left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-4 bottom-4 lg:top-4 bg-primary"
-          //className="neonText absolute left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-4 bottom-4 lg:top-4 rounded-xl bg-primary px-6 py-2.5 text-sm text-white hover:bg-primary/80"
+
+        {/* <Button
+          className="neonText absolute bottom-2 left-1/2 -translate-x-1/2 lg:left-4 lg:top-4 lg:translate-x-0"
+          color="primary"
           onClick={() => navigate("/room")}
         >
-          Go Back
-        </button> */}
+          Back
+        </Button> */}
         <Button
-          className="neonText absolute bottom-2 left-1/2 -translate-x-1/2 lg:left-4 lg:top-4 lg:translate-x-0"
+          //className="neonText absolute left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-4 bottom-2 lg:top-4"
+          className="neonText absolute left-4 top-4 z-50 rounded-xl bg-primary px-6 py-2.5 text-sm text-white hover:bg-primary/80"
           color="primary"
           onClick={() => navigate("/room")}
         >
@@ -136,6 +138,10 @@ export default function Picture2() {
           </div>
         </div>
       </dialog>
+      <div className="absolute left-1/2 top-1/2 z-50 hidden aspect-square h-64 -translate-x-1/2 -translate-y-1/2 rounded-2xl bg-[#60a6fb] p-4 text-white portrait:block">
+        <h2 className="text-center text-4xl">Warning</h2>
+        <p className="p-4 text-center text-xl">Please view in landscape mode</p>
+      </div>
     </>
   );
 }

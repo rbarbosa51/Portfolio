@@ -7,14 +7,16 @@ function Cell() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-400 to-pink-400">
-      {/* <button
-        className="neonText absolute left-4 top-4 rounded-xl bg-primary px-6 py-2.5 text-sm text-white hover:bg-primary/80"
+      {/* <Button
+        className="neonText absolute bottom-4 left-1/2 -translate-x-1/2 lg:left-4 lg:top-4 lg:translate-x-0"
+        color="primary"
         onClick={() => navigate("/room")}
       >
         Back
-      </button> */}
+      </Button> */}
       <Button
-        className="neonText absolute bottom-4 left-1/2 -translate-x-1/2 lg:left-4 lg:top-4 lg:translate-x-0"
+        //className="neonText absolute left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-4 bottom-2 lg:top-4"
+        className="neonText absolute left-4 top-4 z-50 rounded-xl bg-primary px-6 py-2.5 text-sm text-white hover:bg-primary/80"
         color="primary"
         onClick={() => navigate("/room")}
       >
