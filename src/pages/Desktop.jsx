@@ -251,6 +251,15 @@ const Skills = () => (
         />
       </div>
       <div className="font-bold">
+        Angular{" "}
+        <img
+          className="inline"
+          width="24"
+          height="24"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
+        />
+      </div>
+      <div className="font-bold">
         TailwindCSS{" "}
         <img
           className="inline"
